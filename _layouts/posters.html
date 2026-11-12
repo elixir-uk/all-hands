@@ -1,0 +1,38 @@
+---
+layout: default
+---
+{%- assign ev = site.data[page.event] -%}
+{%- assign posters = site.data.posters[page.event] -%}
+{% include hero.html title="Posters" kicker=ev.title compact=true %}
+
+<main class="wrap">
+  <p class="posters__lede">{{ posters.size }} posters from across the community, on boards in the Events Space for the poster session on {{ ev.days.first.date | date: "%A %-d %B" }}. Numbers match the boards.</p>
+
+  <div class="posters">
+  {%- for p in posters %}
+    <details class="poster" id="poster-{{ p.number }}">
+      <summary>
+        <span class="poster__no">{{ p.number }}</span>
+        <span class="poster__head">
+          <span class="poster__title">{{ p.title }}</span>
+          <span class="poster__presenter">Presented by {{ p.presenter }}</span>
+        </span>
+        <span class="poster__toggle"><span class="poster__toggle-text"></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </summary>
+      <div class="poster__body">
+        {{ p.abstract | markdownify }}
+        <p class="poster__authors">{{ p.authors | newline_to_br }}</p>
+        {%- if p.url != "" %}<p><a class="btn btn--outline" href="{{ p.url }}">View the poster</a></p>{% endif %}
+      </div>
+    </details>
+  {%- endfor %}
+  </div>
+</main>
+
+<script>
+// Open a poster linked directly, e.g. /2026/posters/#poster-12
+(function () {
+  var hit = location.hash && document.querySelector(location.hash);
+  if (hit && hit.tagName === 'DETAILS') hit.open = true;
+})();
+</script>

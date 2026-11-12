@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{%- assign ev = site.data[page.event] -%}
+<section class="hero hero--compact" style="background-image: url('{{ '/assets/img/network.svg' | relative_url }}')">
+  <div class="hero__inner">
+    <div class="hero__text">
+      <span class="flag">On the day · {{ ev.venue.name }}</span>
+      <h1>{{ ev.title }}</h1>
+    </div>
+  </div>
+</section>
+
+<div class="nownext" id="nownext" hidden>
+  <div class="nownext__item"><span class="flag flag--sm">Now</span><a id="now-link" href="#"></a></div>
+  <div class="nownext__item"><span class="flag flag--sm flag--blue">Next</span><a id="next-link" href="#"></a></div>
+</div>
+
+<main class="wrap">
+  <section class="help card" id="help">
+    <h2 class="help__title">Need something?</h2>
+    {%- if ev.live.wifi != "" %}<p><strong>Wi-Fi</strong> {{ ev.live.wifi }}</p>{% endif %}
+    <p class="actions">
+      {%- if ev.live.slack != "" %}<a class="btn" href="{{ ev.live.slack }}">Join Slack{% if ev.live.slack_channel != "" %} · {{ ev.live.slack_channel }}{% endif %}</a>{% endif %}
+      {%- if ev.live.phone != "" %}<a class="btn btn--outline" href="tel:{{ ev.live.phone | remove: ' ' }}">Urgent help: {{ ev.live.phone }}</a>{% endif %}
+      <a class="btn btn--outline" href="mailto:{{ ev.live.email }}">Email the team</a>
+      {%- if ev.live.contacts_list != "" %}<a class="btn btn--outline" href="{{ ev.live.contacts_list }}">Attendee contacts</a>{% endif %}
+    </p>
+  </section>
+
+  {% include days.html live=true %}
+  {% include logistics.html %}
+</main>
+
+<script src="{{ '/assets/js/nownext.js' | relative_url }}"></script>

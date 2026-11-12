@@ -1,0 +1,12 @@
+title: ELIXIR-UK All Hands
+description: The annual meeting of the ELIXIR-UK Node community.
+url: ""        # e.g. https://allhands.elixiruknode.org once the custom domain is set
+baseurl: ""    # "/elixir-uk-all-hands" if served from <user>.github.io/elixir-uk-all-hands
+
+plugins:
+  - jekyll-redirect-from
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

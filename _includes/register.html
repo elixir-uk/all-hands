@@ -1,0 +1,26 @@
+{%- comment -%}
+  Register button with deadline. Removed at build time once the deadline has passed,
+  and hidden in the browser at the deadline by assets/js/registration.js.
+  After the deadline the closed message shows even if no form link is set.
+{%- endcomment -%}
+{%- assign ev = site.data[page.event] -%}
+{%- assign reg = ev.registration -%}
+{%- if reg.url != "" or reg.deadline != "" -%}
+  {%- assign built = site.time | date: "%Y-%m-%dT%H:%M" -%}
+  {%- assign closed = false -%}
+  {%- if reg.deadline != "" and built >= reg.deadline %}{% assign closed = true %}{% endif -%}
+  {%- if closed == false and reg.url == "" %}{% assign skip = true %}{% else %}{% assign skip = false %}{% endif -%}
+  {%- unless skip %}
+  <div class="reg {{ include.class }}" data-deadline="{{ reg.deadline }}">
+    {%- unless closed %}
+    <div class="reg__open">
+      <a class="btn" href="{{ reg.url }}">Register</a>
+      {%- if reg.deadline != "" and include.compact != true %}<span class="reg__deadline">Closes {{ reg.deadline | date: "%A %-d %B, %H:%M" }}</span>{% endif %}
+    </div>
+    {%- endunless %}
+    {%- if include.compact != true %}
+    <p class="reg__closed"{% unless closed %} hidden{% endunless %}>{{ reg.closed_message }}</p>
+    {%- endif %}
+  </div>
+  {%- endunless %}
+{%- endif -%}

@@ -1,0 +1,14 @@
+{%- assign ev = site.data[page.event] -%}
+<section class="hero{% if include.compact %} hero--compact{% endif %}" style="background-image: url('{{ '/assets/img/network.svg' | relative_url }}')">
+  <div class="hero__inner">
+    <div class="hero__text">
+      <span class="flag">{% if include.kicker %}{{ include.kicker }}{% else %}{{ ev.dates }} · Liverpool{% endif %}</span>
+      <h1>{{ include.title | default: ev.title }}</h1>
+      {%- if include.strap %}<p class="hero__strap">{{ include.strap }}</p>{% endif %}
+      {%- if include.register %}{% include register.html class="reg--hero" %}{% endif %}
+    </div>
+    {%- if include.art and ev.illustrations.hero %}
+    <img class="hero__art" src="{{ ev.illustrations.hero }}" alt="">
+    {%- endif %}
+  </div>
+</section>

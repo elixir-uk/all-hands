@@ -1,0 +1,414 @@
+# ELIXIR-UK All Hands 2026 – every page for this year is built from this file.
+# Empty "" values are hidden on the pages, so fill them in as they arrive.
+# REMEMBER: this repo is public. Nothing here is secret, even if it only shows on the /live/ page.
+
+title: ELIXIR-UK All Hands 2026
+strapline: Two days in Liverpool with the people building the UK's life-science data infrastructure.
+dates: 25–26 November 2026
+funding: This event is funded by the Biotechnology and Biological Sciences Research Council (BBSRC) under grant BB/C001384/1.
+
+# ── Registration ──────────────────────────────────────────────────────────────
+# The Register button shows until the deadline (UK time), then is replaced by the closed message.
+# It is removed at build time AND hidden in the browser at the deadline, so no push is needed.
+registration:
+  url: ""                      # registration form link
+  deadline: "2026-10-23T23:59"   # from the member invitation email
+  closed_message: Registration is closed. If you need to attend, email contact@elixiruknode.org.
+
+# ── Banners under the header ─────────────────────────────────────────────────
+# Rounded figures, updated by hand. "of" is the smaller text after the figure.
+stats:
+  - { figure: "~90", of: "",      label: people registered }
+  - { figure: "25",  of: "",      label: posters }
+  - { figure: "40",  of: "",      label: organisations represented }
+
+# ── Intro – house style sections, Markdown allowed ───────────────────────────
+# Shown on the home page only while show_intro is true – useful before registration closes.
+show_intro: false
+intro:
+  - heading: What this meeting covers
+    body: >-
+      The annual gathering of the ELIXIR-UK community. Day one looks back at the Node's year,
+      welcomes new members and services, and asks how academic infrastructure works with industry.
+      Day two turns to sustaining our endorsed services as funding changes, and to what makes
+      bioscience data ready for AI.
+  - heading: What to expect
+    body: >-
+      Talks and lightning talks, two panels, a World Café with eight rotating conversations,
+      posters with the bar open and dinner on the first evening. Day two is hands-on: working
+      strands on AI-ready data feed a co-located afternoon workshop drafting a position statement.
+  - heading: Who is this for
+    body: >-
+      People at ELIXIR-UK's member institutions – service providers, data stewards, trainers,
+      core facility leads, researchers and research managers – and the partners who work with them.
+  - heading: How to join
+    body: >-
+      The meeting is in person at Bluecoat, Liverpool. Register before the deadline below. Travel
+      funding was allocated at registration; reimbursement applies only to participants who
+      received an acceptance email.
+
+# ── Committees – shown on the home page ──────────────────────────────────────
+committees:
+  - name: Organising committee
+    members:
+      - { name: Eva Caamano Gutierrez, org: University of Liverpool }
+      - { name: Ian Overton,           org: Queen's University Belfast }
+      - { name: Jacqueline Vigilanti,  org: University of Liverpool }
+      - { name: Joe Maguire,           org: Earlham Institute }
+      - { name: Lauren Mee,            org: University of Liverpool }
+      - { name: Robert Andrews,        org: Cardiff University }
+      - { name: Ryan Kelly,            org: University of Liverpool }
+      - { name: Xènia Pérez Sitjà,     org: Earlham Institute }
+  - name: Programme committee
+    members: []                # names to confirm – the section is hidden while empty
+
+# Illustrations from the ELIXIR-UK website. Copy them into assets/img/ before WordPress is retired
+# and change these to /assets/img/... paths.
+illustrations:
+  hero: https://elixiruknode.org/wp-content/uploads/2024/04/illustration-isometrics-mechanisms-working.svg
+  logistics: https://elixiruknode.org/wp-content/uploads/2024/04/illustration-isometrics-mechanisms-like-extending-hand-join.svg
+  funder_logo: https://elixiruknode.org/wp-content/uploads/2025/08/logo-bbsrc-negative.svg
+
+# ── Logistics page ───────────────────────────────────────────────────────────
+venue:
+  name: Bluecoat
+  address: School Lane, Liverpool L1 3BX
+  map: https://maps.app.goo.gl/Mi7FpMF7ML666YbG7
+
+logistics:
+  - heading: Arriving
+    body: >-
+      Use the front entrance on School Lane. The building opens to the public at 10:00 – before then,
+      ring the front doorbell. Bluecoat staff will meet you at the door each morning and point you to
+      the lift or the stairs.
+    link: { label: How to get there, url: "https://docs.google.com/document/d/1y9GuwcowYlWB8riY9O48tfFJnJjAxHai-tz5jStZoGw/view" }
+  - heading: Where to stay
+    body: |-
+      - **School Lane Hotel**, 8 School Lane, L1 3BT – the closest to the venue
+      - **Maldron Hotel**, 2 Park Lane, L1 8AW
+      - **Citadines City Centre**, 72 Church Street, L1 3AY
+
+      Discount codes and booking details are in the accommodation guide. A football match may
+      coincide with the meeting, so book early.
+    link: { label: Accommodation guide and discount codes, url: "https://docs.google.com/document/d/19YQlzmgYOJCWmoW75LFiSoLa1ybWlCk_Tz2-cjtbng4/view" }
+  - heading: Travel reimbursement
+    body: >-
+      Only for participants who requested funding and received an acceptance email. Read the
+      guidelines before booking.
+    link: { label: Reimbursement guidelines, url: "https://docs.google.com/document/d/17nhKGazTTZX4CZB8nU6QmPsml9QcgzzzwRGTxSh69AU/view" }
+  - heading: Food and drink
+    body: >-
+      Lunch and refreshments on both days, and a sit-down dinner on 25 November. We cater for the
+      dietary requirements you gave at registration. The bar takes cards only – buy your drinks
+      before dinner starts, as staff will be serving food during it.
+    link: { label: Menu, url: "" }
+  - heading: Posters
+    body: >-
+      Poster boards are in the Events Space, where drinks are served. Posters must be portrait.
+    link: { label: All poster abstracts, url: /2026/posters/ }
+  - heading: Coats, luggage and quiet space
+    body: >-
+      There are coat rails and a luggage area in the Events Space – it is not lockable. If you need
+      somewhere quiet for a call, ask at reception and they will find you a space.
+    link: { label: "", url: "" }
+  - heading: Accessibility
+    body: There is a lift to the Performance Space on the second floor.
+    link: { label: "", url: "" }
+  - heading: Questions
+    body: Email [contact@elixiruknode.org](mailto:contact@elixiruknode.org) and we will get back to you.
+    link: { label: "", url: "" }
+
+# ── Day-of details – /live/ page only ────────────────────────────────────────
+live:
+  wifi: ""                 # e.g. "Network: Bluecoat-Guest – password on the screens"
+  slack: https://join.slack.com/t/elixir-uknode/shared_invite/zt-2jn3lbwm8-hYk6BjRUwnRWzw8L4vvHKg
+  slack_channel: ""        # e.g. "#all-hands-2026"
+  email: contact@elixiruknode.org
+  phone: ""                # urgent line – public repo, so use a work number if any
+  contacts_list: ""        # link to the access-controlled attendee list, not the list itself
+
+# ── Speakers ─────────────────────────────────────────────────────────────────
+# One entry per person, in first-name order. Sessions refer to people by id.
+# photo: square image in assets/img/speakers/ (initials are shown if empty). bio: two or three sentences.
+speakers:
+  - { id: andrew-mason,        name: Andrew Mason,          org: University of York,                photo: "", bio: "" }
+  - { id: andy-jones,          name: Andy Jones,            org: University of Liverpool,           photo: "", bio: "" }
+  - { id: angela-smith,        name: Angela Smith,          org: Innovate UK Business Growth,       photo: "", role: Project Manager, bio: "" }
+  - { id: arne-de-klerk,       name: Arné de Klerk,         org: Rothamsted Research / KnetMiner,   photo: "", bio: "" }
+  - { id: birgit-meldal,       name: Birgit Meldal,         org: Pfizer,                            photo: "", role: "Senior Data Manager, Global Data Standards and Ontologies", bio: "" }
+  - { id: carole-goble,        name: Carole Goble,          org: University of Manchester,          photo: "", bio: "" }
+  - { id: charlie-harrison,    name: Charlie Harrison,      org: AIBIO-UK,                          photo: "", bio: "" }
+  - { id: eva-caamano,         name: Eva Caamano Gutierrez, org: University of Liverpool,           photo: "", bio: "" }
+  - { id: evan-troendle,       name: Evan Troendle,         org: Queen's University Belfast,        photo: "", bio: "" }
+  - { id: guy-cochrane,        name: Guy Cochrane,          org: Global Biodata Coalition,          photo: "", bio: "" }
+  - { id: ian-overton,         name: Ian Overton,           org: Queen's University Belfast,        photo: "", bio: "" }
+  - { id: jacqueline-vigilanti, name: Jacqueline Vigilanti, org: University of Liverpool,           photo: "", bio: "" }
+  - { id: jane-lomax,          name: Jane Lomax,            org: Rancho BioSciences,                photo: "", role: Head of Terminology Services, bio: "" }
+  - { id: jason-williams,      name: Jason Williams,        org: Cold Spring Harbor Laboratory,     photo: "", role: "Member, ELIXIR-UK Scientific and Industry Advisory Board", bio: "" }
+  - { id: john-whaling,        name: John Whaling,          org: Liverpool City Region Combined Authority,           photo: "", bio: "" }
+  - { id: kedar-natarajan,     name: Kedar Natarajan,       org: University of Southampton,         photo: "", bio: "" }
+  - { id: lauren-cockayne,     name: Lauren Cockayne,       org: "Cardiff University (LIPID MAPS)", photo: "", bio: "" }
+  - { id: mark-wappett,        name: Mark Wappett,          org: Almac Discovery,                   photo: "", role: Head of Bioinformatics, bio: "" }
+  - { id: neil-hall,           name: Neil Hall,             org: Earlham Institute,                 photo: "", bio: "" }
+  - { id: philippe-rocca-serra, name: Philippe Rocca-Serra, org: University of Oxford,              photo: "", bio: "" }
+  - { id: richard-stark,       name: Richard Stark,         org: University of Warwick,             photo: "", bio: "" }
+  - { id: sascha-ott,          name: Sascha Ott,            org: University of Warwick,             photo: "", bio: "" }
+  - { id: saskia-lawson-tovey, name: Saskia Lawson-Tovey,   org: University of Manchester,          photo: "", bio: "" }
+  - { id: tony-burdett,        name: Tony Burdett,          org: BioFAIR,                           photo: "", bio: "" }
+  - { id: xenia-perez-sitja,   name: Xènia Pérez Sitjà,     org: Earlham Institute,                 photo: "", bio: "" }
+
+# ── Programme ────────────────────────────────────────────────────────────────
+# Session fields:
+#   start / end   – 24h times, UK time
+#   kind          – session | break | social | colocated
+#   chair         – { id: speaker-id }
+#   people        – { id: speaker-id, topic: "" }, or { name: "", org: "", topic: "" } for groups and TBCs
+#   interactive   – buttons on the /live/ page only (label + url)
+#   slides        – shown on every page once added (post-event archive)
+days:
+  - date: "2026-11-25"
+    sessions:
+      - start: "09:30"
+        end: "10:00"
+        kind: break
+        title: Registration
+        note: Tea, coffee and snacks
+
+      - start: "10:00"
+        end: "11:15"
+        kind: session
+        number: 1
+        title: Welcome and introduction
+        format: Talks
+        description: >-
+          The Heads of Node look back at ELIXIR-UK's history and set out where it goes next.
+          Our Liverpool hosts then present the research and innovation happening across the city.
+        people:
+          - { id: neil-hall, topic: "A year in review and the outlook, with the Joint Head of Node" }
+          - { id: john-whaling, topic: Liverpool City Region innovation }
+          - { id: eva-caamano, topic: Liverpool Shared Facilities and the Civic Innovation Labs }
+          - { id: jacqueline-vigilanti, topic: Research data management innovation through Library services }
+        interactive: []
+        slides: ""
+
+      - start: "11:15"
+        end: "11:45"
+        kind: break
+        title: Coffee break
+
+      - start: "11:45"
+        end: "13:00"
+        kind: session
+        number: 2
+        title: ELIXIR-UK success and future
+        format: Lightning talks – five minutes each plus two for questions
+        description: >-
+          What the Node has achieved this year and who has joined it. Flash talks from our newest member
+          institutions, a new Node service and a new community, BioFAIR updates and news from across
+          ELIXIR-UK.
+        people:
+          - { id: andrew-mason, topic: "New member: University of York" }
+          - { id: evan-troendle, topic: "New member: Queen's University Belfast" }
+          - { id: kedar-natarajan, topic: "New member: University of Southampton" }
+          - { id: richard-stark, topic: "New service: EnteroBase" }
+          - { id: sascha-ott, topic: "New service: EnteroBase" }
+          - { id: eva-caamano, topic: "New community: BioinfoCoreLeaders Club" }
+          - { id: saskia-lawson-tovey, topic: "PeerLadder – a national peer mentoring initiative supporting underrepresented dRTP leaders" }
+          - { id: tony-burdett, topic: "How have BioFAIR Pathfinders utilised ELIXIR services to drive their projects forward?" }
+          - { id: carole-goble, topic: "BioFAIR Methods Commons: a national service for finding, running and sharing FAIR workflows in UK life sciences" }
+          - { id: xenia-perez-sitja, topic: "FAIR in action Bridge – a BioFAIR Pathfinder from the RDM Club" }
+        interactive: []
+        slides: ""
+
+      - start: "13:00"
+        end: "14:15"
+        kind: break
+        title: Lunch
+
+      - start: "14:15"
+        end: "15:15"
+        kind: session
+        number: 3
+        title: How to engage with industry
+        format: Lightning talks and panel
+        description: >-
+          What industry looks for in academic collaborators, where the friction tends to be and
+          where to start. Short lightning talks open the session before the panel discussion.
+        chair: { id: philippe-rocca-serra }
+        people:
+          - { id: mark-wappett }
+          - { id: angela-smith }
+          - { id: jane-lomax }
+          - { id: birgit-meldal }
+        interactive:
+          - label: Ask the panel a question
+            url: ""      # one Slido per panel – see README
+        slides: ""
+
+      - start: "15:15"
+        end: "15:45"
+        kind: break
+        title: Coffee break and group photo
+        highlight: Group photo
+        note: Don't disappear – we gather everyone for the ELIXIR-UK group photo during this break.
+
+      - start: "15:45"
+        end: "17:05"
+        kind: session
+        number: 4
+        title: World Café – conversations with the community
+        format: Interactive rotating discussions
+        description: >-
+          Small rotating tables to share experiences, challenges and ideas. Choose up to three topics.
+        topics:
+          - FAIR data management and stewardship
+          - Sensitive and human data communities
+          - Training and capacity building
+          - Bioinformatics core facilities leaders
+          - Industry engagement – follow-up from Session 3
+          - Turning DMPs into living, actionable documents
+          - New to ELIXIR-UK?
+          - "BioFAIR: ask away"
+        interactive:
+          - label: Choose your three topics
+            url: ""
+          - label: Table notes
+            url: ""
+        slides: ""
+
+      - start: "17:05"
+        end: "18:00"
+        kind: session
+        number: 5
+        title: Posters
+        format: Poster session – the bar opens
+        description: >-
+          Research, technical resources and community initiatives – browse the abstracts before you go.
+        links:
+          - label: All poster abstracts
+            url: /2026/posters/
+        interactive:
+          - label: Browse poster abstracts
+            url: /2026/posters/
+        slides: ""
+
+      - start: "18:00"
+        end: "19:00"
+        kind: social
+        title: Free time or join us for a social activity
+
+      - start: "19:00"
+        end: "22:00"
+        kind: social
+        title: Dinner
+        note: At Bluecoat, in the Events Space
+
+  - date: "2026-11-26"
+    sessions:
+      - start: "09:00"
+        end: "09:30"
+        kind: break
+        title: Arrival
+        note: Tea, coffee and snacks
+
+      - start: "09:30"
+        end: "10:45"
+        kind: session
+        number: 6
+        title: Sustaining our resources
+        format: Keynote, case studies and panel
+        description: >-
+          How ELIXIR-UK's endorsed services can adapt as funding changes – a keynote on sustaining
+          bioinformatics infrastructure, case studies of different funding models and a panel on
+          what transfers.
+        chair: { id: neil-hall }
+        people:
+          - { id: lauren-cockayne, topic: Scoping sustainability for LIPID MAPS }
+          - { id: arne-de-klerk, topic: Turning a research tool into a start-up }
+          - { id: andy-jones, topic: A subscription model for VEuPathDB – successes and challenges }
+          - { id: guy-cochrane, topic: A global perspective }
+        interactive:
+          - label: Ask the panel a question
+            url: ""      # one Slido per panel – see README
+        slides: ""
+
+      - start: "10:45"
+        end: "11:15"
+        kind: break
+        title: Coffee break
+
+      - start: "11:15"
+        end: "12:45"
+        kind: session
+        number: 7
+        title: "AI-ready bioscience data: what makes a dataset fit for AI?"
+        format: Introduction and parallel working strands
+        description: >-
+          AIBIO-UK's AI-Ready Bioscience Datasets working group (AIRBDS) is building a catalogue of
+          AI-ready bioscience datasets and has developed the AIRBDS Core metric – 25 yes-or-no
+          questions that score how ready a dataset is for AI. After an introduction, parallel strands
+          explore what counts as a dataset, a taxonomy of AI and what AI-readiness needs. You will
+          calibrate the metric against the data, resources and discovery processes you know, and help
+          decide what the catalogue should include and how it describes datasets. Your ideas and
+          requirements feed the afternoon Joint Statement Workshop.
+        people:
+          - { id: ian-overton, topic: AIRBDS working group }
+          - { id: charlie-harrison, topic: AIRBDS working group }
+        organisers: Run with AIBIO-UK and AIRBDS
+        links:
+          - label: AIRBDS Core metric preprint
+            url: https://zenodo.org/records/21803891
+        interactive:
+          - label: "Strand 1 – what counts as a dataset"
+            url: ""
+          - label: "Strand 2 – taxonomy of AI applications"
+            url: ""
+          - label: "Strand 3 – what AI-readiness requires"
+            url: ""
+        slides: ""
+
+      - start: "12:45"
+        end: "13:00"
+        kind: session
+        title: Closing remarks and Impact Award ceremony
+        description: >-
+          Carole Goble and Neil Hall close the meeting, followed by the ELIXIR-UK Impact Award ceremony.
+        people:
+          - { id: carole-goble }
+          - { id: neil-hall }
+          - { id: jason-williams, topic: "Presents the Impact Awards – member of the ELIXIR-UK Scientific and Industry Advisory Board" }
+        interactive: []
+        slides: ""
+
+      - start: "13:00"
+        end: "14:00"
+        kind: break
+        title: Lunch
+
+      - start: "14:00"
+        end: "17:00"
+        kind: colocated
+        title: "Joint Statement Workshop: shaping a position on AI-ready bioscience datasets"
+        format: Co-located workshop, up to three hours
+        description: >-
+          Participants draft a position statement for data producers, resource managers, scientists,
+          funders and policymakers – covering the key AI-readiness issues, gaps in current practice,
+          funder priorities and recommendations for the UK community. The statement is planned as a
+          peer-reviewed opinion piece from an AIRBDS and ELIXIR-UK partnership.
+        organisers: Hosted by AIBIO-UK
+        links:
+          - label: Workshop topics survey
+            url: https://docs.google.com/forms/d/1g_6uhGyEtR3dVuvVQwfpBvN9t2ivQcZWNjOztfgNzeU/viewform
+        interactive:
+          - label: Statement draft
+            url: ""
+        slides: ""
+
+      - start: "14:00"
+        end: "18:30"
+        kind: colocated
+        title: ELIXIR-UK Scientific and Industry Advisory Board (SIAB) annual meeting
+        format: Co-located – for SIAB and Management Committee members only
+        slides: ""
+
+# Posters live in _data/posters/2026.yml (generated by scripts/posters_from_clickup.py)

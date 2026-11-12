@@ -1,0 +1,34 @@
+---
+layout: default
+---
+{%- assign ev = site.data[page.event] -%}
+{% include hero.html strap=ev.strapline register=true art=true %}
+
+{%- if ev.stats %}
+<section class="stats">
+  {%- for st in ev.stats %}
+  <div class="stat"><span class="stat__figure">{{ st.figure }}{% if st.of != "" %}<small> {{ st.of }}</small>{% endif %}</span>
+    <span class="stat__label">{{ st.label }}</span></div>
+  {%- endfor %}
+</section>
+{%- endif %}
+
+<main class="wrap">
+  {%- if ev.show_intro %}
+  <section class="intro">
+    {%- for block in ev.intro %}
+    <div class="intro__block">
+      <h2>{{ block.heading }}</h2>
+      {{ block.body | markdownify }}
+    </div>
+    {%- endfor %}
+  </section>
+  {%- endif %}
+
+  <div id="programme">
+    {% include days.html live=false %}
+  </div>
+
+  {% include committees.html %}
+  {% include logistics.html %}
+</main>

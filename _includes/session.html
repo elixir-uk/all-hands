@@ -1,0 +1,46 @@
+{%- comment -%}
+  Renders one session. Pass s (the session), day (date string) and live (true on the /live/ page).
+{%- endcomment -%}
+{%- assign s = include.s -%}
+<article class="slot slot--{{ s.kind }}{% if s.highlight %} slot--highlight{% endif %}" id="s-{{ include.day }}-{{ s.start | remove: ':' }}"
+         data-start="{{ include.day }}T{{ s.start }}" data-end="{{ include.day }}T{{ s.end }}">
+  {%- if s.highlight %}<span class="flag slot__flag"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 7.2 6H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-3.2L15 4H9zm3 4.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z" fill="currentColor"/></svg>{{ s.highlight }}</span>{% endif %}
+  {%- if s.kind == 'session' or s.kind == 'colocated' %}
+    {%- if s.number %}<span class="flag slot__flag">Session {{ s.number }}</span>
+    {%- elsif s.kind == 'colocated' %}<span class="flag flag--blue slot__flag">Co-located</span>{% endif %}
+  {%- endif %}
+  <div class="slot__grid">
+    <p class="slot__time">{{ s.start }}<span class="slot__sep">–</span><span class="slot__end">{{ s.end }}</span></p>
+    <div class="slot__body">
+      <h3 class="slot__title">{{ s.title }}</h3>
+      {%- if s.format %}<p class="slot__format">{{ s.format }}</p>{% endif %}
+      {%- if s.note %}<p class="slot__note">{{ s.note }}</p>{% endif %}
+
+      {%- if s.kind == 'session' or s.kind == 'colocated' %}
+        {%- if s.description %}<p class="slot__desc">{{ s.description }}</p>{% endif %}
+
+        {%- if s.topics %}
+        <ol class="topics">{% for t in s.topics %}<li><span>{{ forloop.index }}</span>{{ t }}</li>{% endfor %}</ol>
+        {%- endif %}
+
+        {%- if s.chair or s.people or s.organisers %}
+        <ul class="people">
+          {%- if s.chair %}{% include person.html p=s.chair chair=true %}{% endif %}
+          {%- for person in s.people %}{% include person.html p=person %}{% endfor %}
+          {%- if s.organisers %}<li class="organisers">{{ s.organisers }}</li>{% endif %}
+        </ul>
+        {%- endif %}
+
+        {%- capture buttons -%}
+          {%- if include.live -%}
+            {%- for l in s.interactive -%}{%- if l.url != "" -%}{%- assign u = l.url -%}{%- if u contains "://" or u contains "mailto:" -%}{%- else -%}{%- assign u = u | relative_url -%}{%- endif -%}<a class="btn" href="{{ u }}">{{ l.label }}</a>{%- endif -%}{%- endfor -%}
+          {%- endif -%}
+          {%- for l in s.links -%}{%- if l.url != "" -%}{%- assign u = l.url -%}{%- if u contains "://" or u contains "mailto:" -%}{%- else -%}{%- assign u = u | relative_url -%}{%- endif -%}<a class="btn btn--outline" href="{{ u }}">{{ l.label }}</a>{%- endif -%}{%- endfor -%}
+          {%- if s.slides and s.slides != "" -%}<a class="btn btn--outline" href="{{ s.slides }}">Slides</a>{%- endif -%}
+        {%- endcapture -%}
+        {%- assign buttons = buttons | strip -%}
+        {%- if buttons != "" %}<p class="actions">{{ buttons }}</p>{% endif %}
+      {%- endif %}
+    </div>
+  </div>
+</article>

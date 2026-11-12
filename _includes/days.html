@@ -1,0 +1,14 @@
+{%- assign ev = site.data[page.event] -%}
+{%- for day in ev.days %}
+<section class="day" id="day-{{ forloop.index }}">
+  <header class="day__head">
+    <h2>Day {{ forloop.index }}</h2>
+    <p>{{ day.date | date: "%A %-d %B" }}</p>
+  </header>
+  <div class="day__list">
+  {%- for s in day.sessions %}
+    {% include session.html s=s day=day.date live=include.live %}
+  {%- endfor %}
+  </div>
+</section>
+{%- endfor %}

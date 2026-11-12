@@ -1,0 +1,18 @@
+{%- comment -%} Compact logistics block for the foot of the programme page. {%- endcomment -%}
+{%- assign ev = site.data[page.event] -%}
+<section class="logistics" id="logistics">
+  <div class="logistics__card card">
+    <div>
+      <h2>Getting there</h2>
+      <dl>
+        <dt>When</dt><dd>{{ ev.dates }}</dd>
+        <dt>Where</dt><dd>{{ ev.venue.name }}<br>{{ ev.venue.address }}</dd>
+      </dl>
+      <p class="actions">
+        <a class="btn" href="{{ '/' | append: page.event | append: '/logistics/' | relative_url }}">Travel, hotels and reimbursement</a>
+        <a class="btn btn--outline" href="{{ ev.venue.map }}">Open in Maps</a>
+      </p>
+    </div>
+    {%- if ev.illustrations.logistics %}<img class="logistics__art" src="{{ ev.illustrations.logistics }}" alt="">{% endif %}
+  </div>
+</section>

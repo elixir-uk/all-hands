@@ -1,0 +1,35 @@
+---
+layout: default
+---
+{%- assign ev = site.data[page.event] -%}
+{%- assign base = '/' | append: page.event | append: '/' | relative_url -%}
+{% include hero.html title="Speakers" kicker=ev.title compact=true %}
+
+<main class="wrap">
+  <div class="speakers">
+  {%- for sp in ev.speakers %}
+    <article class="speaker card" id="{{ sp.id }}">
+      {%- if sp.photo != "" %}
+      <img class="speaker__photo" src="{{ sp.photo | relative_url }}" alt="">
+      {%- else %}
+      {%- assign parts = sp.name | split: " " %}
+      <span class="speaker__photo speaker__initials">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
+      {%- endif %}
+      <div class="speaker__body">
+        <h2>{{ sp.name }}</h2>
+        <p class="speaker__org">{% if sp.role %}{{ sp.role }}, {% endif %}{{ sp.org }}</p>
+        {%- if sp.bio != "" %}<p>{{ sp.bio }}</p>{% endif %}
+        <p class="speaker__sessions">
+        {%- for day in ev.days %}{% for s in day.sessions %}
+          {%- assign hit = s.people | where: "id", sp.id -%}
+          {%- if hit.size > 0 or s.chair.id == sp.id %}
+          <a class="speaker__link" href="{{ base }}#s-{{ day.date }}-{{ s.start | remove: ':' }}">
+            {%- if s.number %}Session {{ s.number }}{% else %}{{ s.title }}{% endif %}{% if s.chair.id == sp.id %} · Chair{% endif %}</a>
+          {%- endif %}
+        {%- endfor %}{% endfor %}
+        </p>
+      </div>
+    </article>
+  {%- endfor %}
+  </div>
+</main>

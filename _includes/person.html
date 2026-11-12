@@ -1,0 +1,21 @@
+{%- comment -%}
+  Resolves a session person: { id } looks up the speakers list; otherwise uses the inline fields.
+  Sets: pn (name), po (org), pr (role), pt (topic), pid (id or empty).
+{%- endcomment -%}
+{%- assign ev = site.data[page.event] -%}
+{%- assign p = include.p -%}
+{%- if p.id -%}
+  {%- assign sp = ev.speakers | where: "id", p.id | first -%}
+  {%- assign pn = sp.name -%}{%- assign po = sp.org -%}{%- assign pr = sp.role -%}{%- assign pid = p.id -%}
+{%- else -%}
+  {%- assign pn = p.name -%}{%- assign po = p.org -%}{%- assign pr = p.role -%}{%- assign pid = "" -%}
+{%- endif -%}
+{%- assign pt = p.topic | default: pr -%}
+<li>
+  {%- if pn == "" or pn == nil %}<strong>Speaker TBC</strong>
+  {%- elsif pid != "" %}<a class="person" href="{{ '/' | append: page.event | append: '/speakers/' | relative_url }}#{{ pid }}"><strong>{{ pn }}</strong></a>
+  {%- else %}<strong>{{ pn }}</strong>{% endif %}
+  {%- if include.chair %} <span class="role">Chair</span>{% endif %}
+  {%- if po != "" and po != nil %}<br><span class="org">{{ po }}</span>{% endif %}
+  {%- if pt != "" and pt != nil and include.chair != true %}<br><span class="topic">{{ pt }}</span>{% endif %}
+</li>

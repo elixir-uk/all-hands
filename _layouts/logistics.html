@@ -1,0 +1,31 @@
+---
+layout: default
+---
+{%- assign ev = site.data[page.event] -%}
+{% include hero.html title="Logistics" kicker=ev.title compact=true %}
+
+<main class="wrap">
+  <section class="venue card">
+    <div>
+      <span class="flag">Venue</span>
+      <h2>{{ ev.venue.name }}</h2>
+      <p>{{ ev.venue.address }}<br>{{ ev.dates }}</p>
+      <p class="actions"><a class="btn" href="{{ ev.venue.map }}">Open in Maps</a></p>
+    </div>
+    {%- if ev.illustrations.logistics %}<img class="logistics__art" src="{{ ev.illustrations.logistics }}" alt="">{% endif %}
+  </section>
+
+  <div class="info-grid">
+  {%- for item in ev.logistics %}
+    {%- if item.body != "" or item.link.url != "" %}
+    <section class="info">
+      <h2>{{ item.heading }}</h2>
+      {{ item.body | markdownify }}
+      {%- if item.link.url != "" %}{%- assign u = item.link.url -%}{%- if u contains "://" -%}{%- else -%}{%- assign u = u | relative_url -%}{%- endif -%}<p><a class="btn btn--outline" href="{{ u }}">{{ item.link.label }}</a></p>{% endif %}
+    </section>
+    {%- endif %}
+  {%- endfor %}
+  </div>
+
+  {% include register.html class="reg--block" %}
+</main>

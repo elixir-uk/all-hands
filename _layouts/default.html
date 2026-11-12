@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- assign ev = site.data[page.event] %}
+  {%- assign base = '/' | append: page.event | append: '/' | relative_url %}
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ ev.title | default: site.title }}</title>
+  <meta name="description" content="{{ ev.strapline | default: site.description }}">
+  {%- if page.noindex %}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body class="{% if page.noindex %}is-live{% endif %}">
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="topbar__logo" href="{{ base }}" aria-label="{{ ev.title }} home">{% include logo.svg %}</a>
+      <nav class="topbar__nav">
+        {%- if page.noindex %}
+        <a href="#help">Help</a>
+        <a href="{{ base }}posters/">Posters</a>
+        <a href="{{ base }}">Full programme</a>
+        {%- else %}
+        <a href="{{ base }}#programme"{% if page.section == 'programme' %} aria-current="page"{% endif %}>Programme</a>
+        <a href="{{ base }}speakers/"{% if page.section == 'speakers' %} aria-current="page"{% endif %}>Speakers</a>
+        <a href="{{ base }}posters/"{% if page.section == 'posters' %} aria-current="page"{% endif %}>Posters</a>
+        <a href="{{ base }}logistics/"{% if page.section == 'logistics' %} aria-current="page"{% endif %}>Logistics</a>
+        {% include register.html compact=true class="reg--nav" %}
+        {%- endif %}
+      </nav>
+    </div>
+  </header>
+
+  {{ content }}
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__logos">
+        {% include logo.svg %}
+        {%- if ev.illustrations.funder_logo %}<img src="{{ ev.illustrations.funder_logo }}" alt="BBSRC" class="footer__funder">{% endif %}
+      </div>
+      <p>{{ ev.funding }}</p>
+      <p><a href="https://elixiruknode.org">elixiruknode.org</a> · <a href="mailto:{{ ev.live.email }}">{{ ev.live.email }}</a></p>
+    </div>
+  </footer>
+  <script src="{{ '/assets/js/registration.js' | relative_url }}"></script>
+</body>
+</html>

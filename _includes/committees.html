@@ -1,0 +1,16 @@
+{%- assign ev = site.data[page.event] -%}
+{%- assign shown = ev.committees | where_exp: "c", "c.members.size > 0" -%}
+{%- if shown.size > 0 %}
+<section class="committees" id="committees">
+  {%- for c in shown %}
+  <div class="committee">
+    <h2>{{ c.name }}</h2>
+    <ul>
+      {%- for m in c.members %}
+      <li><strong>{{ m.name }}</strong><span>{{ m.org }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endfor %}
+</section>
+{%- endif %}
