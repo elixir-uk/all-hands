@@ -68,6 +68,10 @@ illustrations:
   hero: https://elixiruknode.org/wp-content/uploads/2024/04/illustration-isometrics-mechanisms-working.svg
   logistics: https://elixiruknode.org/wp-content/uploads/2024/04/illustration-isometrics-mechanisms-like-extending-hand-join.svg
   funder_logo: https://elixiruknode.org/wp-content/uploads/2025/08/logo-bbsrc-negative.svg
+  # Group photo shown under the hero on the home page. Leave photo "" to hide it.
+  photo: https://elixiruknode.org/wp-content/uploads/2025/11/2025-elixir-uk-all-hands-03.webp
+  photo_alt: Group photo of participants at the ELIXIR-UK All Hands 2025 in Exeter
+  photo_caption: Last year's All Hands in Exeter, 2025
 
 # ── Logistics page ───────────────────────────────────────────────────────────
 venue:

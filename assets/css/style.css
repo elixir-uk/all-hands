@@ -312,3 +312,58 @@ a.person:hover strong { color: var(--orange); }
 .poster[open] .poster__toggle-text::before { content: "Close"; }
 .poster[open] .poster__toggle svg { transform: rotate(180deg); }
 @media (max-width: 600px) { .poster__toggle-text { display: none; } }
+
+/* ── Timetable look – no cards, no side rules ─────────────── */
+/* Group photo under the hero */
+.photo { margin: 0; position: relative; background: var(--navy); }
+.photo img { display: block; width: 100%; height: auto; max-height: 520px; object-fit: cover; object-position: center 45%; }
+.photo figcaption { max-width: var(--wrap); margin: 0 auto; padding: 10px 20px; font-size: .85rem; color: rgba(255,255,255,.75); }
+
+/* Figures – plain type in a row, no boxes */
+.stats { margin: 0 auto; padding: 40px 20px 0; display: flex; flex-wrap: wrap; gap: 20px 56px; }
+.stat { background: none; border: 0; border-radius: 0; box-shadow: none; padding: 0; }
+.stat__figure { font-size: 3rem; }
+.stat__label { text-transform: uppercase; letter-spacing: .06em; font-size: .8rem; font-weight: 700; color: var(--blue); }
+
+/* Intro and committee headings – no rule above */
+.intro__block h2, .committee h2 { border-top: 0; padding-top: 0; }
+.committee ul { gap: 4px 24px; }
+.committee li { background: none; border: 0; border-radius: 0; padding: 6px 0; }
+
+/* Sessions – rows of a printed timetable */
+.day__list { gap: 0; border-top: 3px solid var(--navy); }
+.slot, .slot--break, .slot--social, .slot--colocated, .slot--break.slot--highlight {
+  background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; overflow: visible; }
+.slot__grid { padding: 22px 0 26px; }
+.slot .slot__flag { display: inline-flex; background: none; color: var(--orange); padding: 0; border-radius: 0;
+  font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .1em; margin: 24px 0 0; }
+.slot .slot__flag.flag--blue { color: var(--blue); }
+.slot .slot__flag + .slot__grid { padding-top: 4px; }
+.slot__time { font-size: 1.25rem; }
+.slot__title { font-size: 1.45rem; }
+
+.slot--break .slot__grid, .slot--social .slot__grid { padding: 12px 0; }
+.slot--break .slot__time, .slot--social .slot__time { font-size: 1rem; font-weight: 700; color: var(--text); }
+.slot--break .slot__title, .slot--social .slot__title { font-weight: 400; color: var(--text); font-style: italic; }
+.slot--break.slot--highlight .slot__title { color: var(--orange); font-style: normal; font-weight: 700; }
+
+.slot.is-now { border: 0; border-bottom: 1px solid var(--line); box-shadow: inset 0 3px 0 var(--orange); background: rgba(244,125,33,.06); }
+.slot.is-now .slot__time { color: var(--orange); }
+
+/* Speakers in a session – plain list, no side line */
+.people li, .people .organisers { border-left: 0; padding-left: 0; }
+.people .organisers { font-style: italic; }
+.people .role { background: none; color: var(--orange); padding: 0; border-radius: 0; font-weight: 900; margin-left: 6px; }
+
+/* World Café topics – numbered list, no tiles */
+.topics { gap: 2px 32px; counter-reset: none; }
+.topics li { background: none; border-radius: 0; padding: 6px 0; align-items: baseline; }
+.topics li span { width: auto; height: auto; background: none; color: var(--orange); border-radius: 0; font-size: 1rem; }
+
+/* Registration closed note in the hero – no side line */
+.reg--hero .reg__closed { border-left: 0; border-radius: 5px; }
+
+@media (min-width: 720px) {
+  .slot .slot__flag { margin-left: 130px; }
+  .slot__grid { grid-template-columns: 110px 1fr; }
+}
