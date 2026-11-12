@@ -2,13 +2,10 @@
 layout: default
 ---
 {%- assign ev = site.data[page.event] -%}
-{% include hero.html strap=ev.strapline register=true art=true %}
-
 {%- if ev.illustrations.photo and ev.illustrations.photo != "" %}
-<figure class="photo">
-  <img src="{{ ev.illustrations.photo }}" alt="{{ ev.illustrations.photo_alt }}" width="1600" height="649" loading="eager">
-  {%- if ev.illustrations.photo_caption %}<figcaption>{{ ev.illustrations.photo_caption }}</figcaption>{% endif %}
-</figure>
+{% include hero.html strap=ev.strapline register=true photo=ev.illustrations.photo %}
+{%- else %}
+{% include hero.html strap=ev.strapline register=true art=true %}
 {%- endif %}
 
 {%- if ev.stats %}

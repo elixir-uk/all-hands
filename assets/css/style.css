@@ -314,10 +314,15 @@ a.person:hover strong { color: var(--orange); }
 @media (max-width: 600px) { .poster__toggle-text { display: none; } }
 
 /* ── Timetable look – no cards, no side rules ─────────────── */
-/* Group photo under the hero */
-.photo { margin: 0; position: relative; background: var(--navy); }
-.photo img { display: block; width: 100%; height: auto; max-height: 520px; object-fit: cover; object-position: center 45%; }
-.photo figcaption { max-width: var(--wrap); margin: 0 auto; padding: 10px 20px; font-size: .85rem; color: rgba(255,255,255,.75); }
+/* Hero with last year's group photo behind a navy overlay */
+.hero--photo { background-position: center 55%; }
+.hero--photo::after { background: linear-gradient(90deg, rgba(2,52,82,.95) 0%, rgba(2,52,82,.85) 40%, rgba(2,52,82,.45) 100%); }
+.hero--photo .hero__inner { padding-top: 88px; padding-bottom: 104px; }
+.hero__caption { position: absolute; right: 20px; bottom: 12px; z-index: 1; margin: 0; font-size: .8rem; color: rgba(255,255,255,.7); }
+@media (max-width: 720px) {
+  .hero--photo::after { background: rgba(2,52,82,.82); }
+  .hero--photo .hero__inner { padding-top: 56px; padding-bottom: 72px; }
+}
 
 /* Figures – plain type in a row, no boxes */
 .stats { margin: 0 auto; padding: 40px 20px 0; display: flex; flex-wrap: wrap; gap: 20px 56px; }
