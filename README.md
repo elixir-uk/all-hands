@@ -52,14 +52,7 @@ Small fixes can go straight into `_data/posters/2026.yml`. Never commit the CSV 
 - Preview the now-and-next bar with `/2026/live/?now=2026-11-25T10:30`.
 - Add `slides:` links after the event to turn `/2026/` into the archive.
 
-## Panel questions
-
-Slido's free Basic plan is enough: unlimited Q&A with upvoting, anonymous if you allow it. It caps each slido at 100
-participants, so create **one slido per panel** (Sessions 3 and 6) rather than one for the whole event, and paste each
-link into that session's `interactive:` entry. The free plan has no moderation, so the chair reads from the list rather
-than projecting it unfiltered.
-
-## Next year
+## Each year
 
 1. Copy `_data/2026.yml` to `_data/2027.yml` and update it.
 2. Copy the `2026/` folder to `2027/` and change `event: "2026"` and the permalinks.
