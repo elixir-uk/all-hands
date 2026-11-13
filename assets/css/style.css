@@ -349,16 +349,20 @@ a.person:hover strong { color: var(--orange); }
 
 .slot--break .slot__grid, .slot--social .slot__grid { padding: 12px 0; }
 .slot--break .slot__time, .slot--social .slot__time { font-size: 1rem; font-weight: 700; color: var(--text); }
-.slot--break .slot__title, .slot--social .slot__title { font-weight: 400; color: var(--text); font-style: italic; }
-.slot--break.slot--highlight .slot__title { color: var(--orange); font-style: normal; font-weight: 700; }
+.slot--break .slot__title, .slot--social .slot__title { font-weight: 400; color: var(--text); }
+
+/* Group photo – keeps its original orange-bordered card and camera tag so nobody misses it */
+.slot--break.slot--highlight { background: #fff; border: 2px solid var(--orange); border-radius: 10px; margin: 14px 0; }
+.slot--break.slot--highlight .slot__flag { background: var(--orange); color: #fff; padding: 5px 10px; border-radius: 0 5px 5px 0;
+  font-size: 14px; font-weight: 700; text-transform: none; letter-spacing: normal; margin: 14px 0 0; gap: 6px; align-items: center; }
+.slot--break.slot--highlight .slot__grid { padding: 12px 22px 16px; }
+.slot--break.slot--highlight .slot__title { color: var(--navy); font-weight: 700; }
 
 .slot.is-now { border: 0; border-bottom: 1px solid var(--line); box-shadow: inset 0 3px 0 var(--orange); background: rgba(244,125,33,.06); }
 .slot.is-now .slot__time { color: var(--orange); }
 
 /* Speakers in a session – plain list, no side line */
 .people li, .people .organisers { border-left: 0; padding-left: 0; }
-.people .organisers { font-style: italic; }
-.people .role { background: none; color: var(--orange); padding: 0; border-radius: 0; font-weight: 900; margin-left: 6px; }
 
 /* World Café topics – numbered list, no tiles */
 .topics { gap: 2px 32px; counter-reset: none; }
