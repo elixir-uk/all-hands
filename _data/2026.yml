@@ -219,7 +219,7 @@ days:
           - { ids: [richard-stark, sascha-ott], topic: "New service: EnteroBase" }
           - { id: eva-caamano, topic: "New community: BioinfoCoreLeaders Club" }
           - { id: saskia-lawson-tovey, topic: "PeerLadder – a national peer mentoring initiative supporting underrepresented dRTP leaders" }
-          - { id: tony-burdett, topic: "How have BioFAIR Fellows utilised ELIXIR services to drive their projects forward?" }
+          - { id: tony-burdett, topic: "Introducing the Fellowship of BioFAIR" }
           - { id: carole-goble, topic: "BioFAIR Methods Commons: a national service for finding, running and sharing FAIR workflows in UK life sciences" }
           - { id: xenia-perez-sitja, topic: "FAIR in action Bridge – a BioFAIR Pathfinder from the RDM Club" }
         interactive: []
