@@ -7,7 +7,22 @@
   </header>
   <div class="day__list">
   {%- for s in day.sessions %}
+    {%- comment -%} Co-located sessions that start at the same time run in parallel – shown side by side {%- endcomment -%}
+    {%- assign i = forloop.index0 -%}
+    {%- assign prev = nil -%}{%- if i > 0 -%}{%- assign prev = day.sessions[forloop.index0 | minus: 1] -%}{%- endif -%}
+    {%- assign next = day.sessions[forloop.index] -%}
+    {%- assign with_prev = false -%}{%- if s.kind == 'colocated' and prev.kind == 'colocated' and prev.start == s.start -%}{%- assign with_prev = true -%}{%- endif -%}
+    {%- assign with_next = false -%}{%- if s.kind == 'colocated' and next.kind == 'colocated' and next.start == s.start -%}{%- assign with_next = true -%}{%- endif -%}
+    {%- if with_next and with_prev == false %}
+    <div class="parallel">
+      <p class="slot__time parallel__time">{{ s.start }}<span class="parallel__label">In parallel</span></p>
+      <div class="parallel__cols">
+    {%- endif %}
     {% include session.html s=s day=day.date live=include.live %}
+    {%- if with_prev and with_next == false %}
+      </div>
+    </div>
+    {%- endif %}
   {%- endfor %}
   </div>
 </section>

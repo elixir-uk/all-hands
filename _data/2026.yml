@@ -167,7 +167,7 @@ speakers:
 #   start / end   – 24h times, UK time
 #   kind          – session | break | social | colocated
 #   chair         – { id: speaker-id }
-#   people        – { id: speaker-id, topic: "" }, or { name: "", org: "", topic: "" } for groups and TBCs
+#   people        – { id: speaker-id, topic: "" }, or { ids: [id, id], topic: "" } for a shared talk, or { name: "", org: "", topic: "" } for groups and TBCs
 #   interactive   – buttons on the /live/ page only (label + url)
 #   slides        – shown on every page once added (post-event archive)
 days:
@@ -207,17 +207,16 @@ days:
         number: 2
         title: ELIXIR-UK success and future
         chair: { id: robert-andrews }
-        format: Lightning talks – five minutes each plus two for questions
+        format: Flash talks
         description: >-
           What the Node has achieved this year and who has joined it. Flash talks from our newest member
           institutions, a new Node service and a new community, BioFAIR updates and news from across
-          ELIXIR-UK.
+          ELIXIR-UK. Each talk is five minutes plus two for questions.
         people:
           - { id: andrew-mason, topic: "New member: University of York" }
           - { id: evan-troendle, topic: "New member: Queen's University Belfast" }
           - { id: kedar-natarajan, topic: "New member: University of Southampton" }
-          - { id: richard-stark, topic: "New service: EnteroBase" }
-          - { id: sascha-ott, topic: "New service: EnteroBase" }
+          - { ids: [richard-stark, sascha-ott], topic: "New service: EnteroBase" }
           - { id: eva-caamano, topic: "New community: BioinfoCoreLeaders Club" }
           - { id: saskia-lawson-tovey, topic: "PeerLadder – a national peer mentoring initiative supporting underrepresented dRTP leaders" }
           - { id: tony-burdett, topic: "How have BioFAIR Fellows utilised ELIXIR services to drive their projects forward?" }
@@ -236,7 +235,7 @@ days:
         kind: session
         number: 3
         title: How to engage with industry
-        format: Lightning talks and panel
+        format: Flash talks and panel
         description: >-
           What industry looks for in academic collaborators, where the friction tends to be and
           where to start. Short lightning talks open the session before the panel discussion.
@@ -263,7 +262,7 @@ days:
         kind: session
         number: 4
         title: World Café – conversations with the community
-        format: Interactive rotating discussions
+        format: World Café
         description: >-
           Small rotating tables to share experiences, challenges and ideas. Choose up to three topics.
         topics:
@@ -275,6 +274,7 @@ days:
           - Turning DMPs into living, actionable documents
           - New to ELIXIR-UK?
           - "BioFAIR: ask away"
+          - Careers and mentoring programmes
         interactive:
           - label: Choose your three topics
             url: ""
@@ -287,9 +287,10 @@ days:
         kind: session
         number: 5
         title: Posters
-        format: Poster session – the bar opens
+        format: Poster session
         description: >-
           Research, technical resources and community initiatives – browse the abstracts before you go.
+          The bar opens.
         links:
           - label: All poster abstracts
             url: /2026/posters/
@@ -322,7 +323,7 @@ days:
         kind: session
         number: 6
         title: Sustaining our resources
-        format: Keynote, case studies and panel
+        format: Talks and panel
         description: >-
           How ELIXIR-UK's endorsed services can adapt as funding changes – a keynote on sustaining
           bioinformatics infrastructure, case studies of different funding models and a panel on
@@ -348,7 +349,7 @@ days:
         kind: session
         number: 7
         title: "AI-ready bioscience data: what makes a dataset fit for AI?"
-        format: Introduction and parallel working strands
+        format: Workshop
         description: >-
           AIBIO-UK's AI-Ready Bioscience Datasets working group (AIRBDS) is building a catalogue of
           AI-ready bioscience datasets and has developed the AIRBDS Core metric – 25 yes-or-no
@@ -395,7 +396,7 @@ days:
         end: "17:00"
         kind: colocated
         title: "Joint Statement Workshop: shaping a position on AI-ready bioscience datasets"
-        format: Co-located workshop, up to three hours
+        format: Workshop
         description: >-
           Participants draft a position statement for data producers, resource managers, scientists,
           funders and policymakers – covering the key AI-readiness issues, gaps in current practice,
@@ -414,7 +415,8 @@ days:
         end: "18:30"
         kind: colocated
         title: ELIXIR-UK Scientific and Industry Advisory Board (SIAB) annual meeting
-        format: Co-located – for SIAB and Management Committee members only
+        format: Meeting
+        note: For SIAB and Management Committee members only
         slides: ""
 
 # Posters live in _data/posters/2026.yml (generated by scripts/posters_from_clickup.py)

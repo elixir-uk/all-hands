@@ -11,11 +11,35 @@
   {%- assign pn = p.name -%}{%- assign po = p.org -%}{%- assign pr = p.role -%}{%- assign pid = "" -%}
 {%- endif -%}
 {%- assign pt = p.topic | default: pr -%}
-<li{% if include.chair %} class="chair"{% endif %}>
-  {%- if pn == "" or pn == nil %}<strong>Speaker TBC</strong>
-  {%- elsif pid != "" %}<a class="person" href="{{ '/' | append: page.event | append: '/speakers/' | relative_url }}#{{ pid }}"><strong>{{ pn }}</strong></a>
-  {%- else %}<strong>{{ pn }}</strong>{% endif %}
-  {%- if include.chair %} <span class="role">Chair</span>{% endif %}
-  {%- if po != "" and po != nil %}<br><span class="org">{{ po }}</span>{% endif %}
-  {%- if pt != "" and pt != nil and include.chair != true %}<br><span class="topic">{{ pt }}</span>{% endif %}
+{%- comment -%}
+  Talks lead with the talk title, speaker underneath. Name-first for people with no talk title
+  (panel members, roles).
+{%- endcomment -%}
+{%- assign talk_led = false -%}
+{%- if p.topic and p.topic != "" -%}{%- assign talk_led = true -%}{%- endif -%}
+{%- if pn == "" or pn == nil -%}{%- assign pn = "Speaker TBC" -%}{%- endif -%}
+{%- if talk_led %}
+<li class="talk">
+  <strong>{{ pt }}</strong>
+  <br><span class="talk__by">
+  {%- if p.ids -%}
+    {%- comment -%} Shared talk: "A and B, Org" when they share an org, otherwise "A, Org and B, Org" {%- endcomment -%}
+    {%- assign group = ev.speakers | where_exp: "x", "p.ids contains x.id" -%}
+    {%- assign orgs = group | map: "org" | uniq -%}
+    {%- if orgs.size == 1 -%}
+      {{ group | map: "name" | array_to_sentence_string }}, <span class="org">{{ orgs.first }}</span>
+    {%- else -%}
+      {%- for g in group %}{% if forloop.index > 1 %}{% if forloop.last %} and {% else %}, {% endif %}{% endif %}{{ g.name }}, <span class="org">{{ g.org }}</span>{% endfor -%}
+    {%- endif -%}
+  {%- else -%}
+    {{ pn }}{% if po != "" and po != nil %}, <span class="org">{{ po }}</span>{% endif %}
+  {%- endif -%}
+  </span>
 </li>
+{%- else %}
+<li>
+  <strong>{{ pn }}</strong>
+  {%- if po != "" and po != nil %}<br><span class="org">{{ po }}</span>{% endif %}
+  {%- if pt != "" and pt != nil %}<br><span class="topic">{{ pt }}</span>{% endif %}
+</li>
+{%- endif %}

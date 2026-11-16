@@ -22,7 +22,8 @@ layout: default
         <p class="speaker__sessions">
         {%- for day in ev.days %}{% for s in day.sessions %}
           {%- assign hit = s.people | where: "id", sp.id -%}
-          {%- if hit.size > 0 or s.chair.id == sp.id %}
+          {%- assign shared = s.people | where: "ids", sp.id -%}
+          {%- if hit.size > 0 or shared.size > 0 or s.chair.id == sp.id %}
           <a class="speaker__link" href="{{ base }}#s-{{ day.date }}-{{ s.start | remove: ':' }}">
             {%- if s.number %}Session {{ s.number }}{% else %}{{ s.title }}{% endif %}{% if s.chair.id == sp.id %} · Chair{% endif %}</a>
           {%- endif %}
