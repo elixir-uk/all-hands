@@ -306,26 +306,27 @@
 
     These principles are illustrated with visual presentations of the role RSpace is playing in the two planned national infrastructures.
   url: ''
-- number: '18'
-  title: 'NEOF: Empowering environmental researchers with Omics technologies and training'
-  presenter: Matthew Gemmell
-  authors: |-
-    Matthew R. Gemmell (University of Liverpool, Centre for Genomic Research, NERC Environmental Omics Facility)
-  abstract: |-
-    The poster will give an overview of NEOF and what we have achieved since our formation in 2020.
-
-    NEOF is a partnership between world-leading labs at the Universities of Liverpool and Sheffield who have pooled resources and expertise to deliver state-of-the-art omics expertise, capability and training to UK environmental scientists.
-
-    We are funded by the Natural Environment Research Council (NERC).
-
-    Our three primary pillars are: access to omics technologies, a visitor facility, and our bioinformatics training courses.
-
-    Our omics technologies include: Genomic sequencing, Isoform analysis, Epigenomics, Single-cell omics, and quantitative metabolomics. To make these technologies more accessible we offer regular funding opportunities.
-
-    Our visitor facility (based in the University of Sheffield) provides PhD students hands-on training in sample preparation for downstream omics technologies.
-
-    Our final pillar, the main focus of the poster, is our bioinformatic workshops. We have run over 70 2-day courses since 2020. These cover the foundations of bioinformatics (e.g. intro to Linux, QC, python, R) to application specific courses (e.g. 16S rRNA, shotgun metagenomics, population genomics, etc.). All except one a year are online to cater to the entire UK. We are proud that we currently have a 100% recommendation rate from the thousands of attendees.
-  url: ''
+# Poster 18 withdrawn (presenter dropped out) – kept commented so it can be restored; number 18 left unused.
+# - number: '18'
+#   title: 'NEOF: Empowering environmental researchers with Omics technologies and training'
+#   presenter: Matthew Gemmell
+#   authors: |-
+#     Matthew R. Gemmell (University of Liverpool, Centre for Genomic Research, NERC Environmental Omics Facility)
+#   abstract: |-
+#     The poster will give an overview of NEOF and what we have achieved since our formation in 2020.
+# 
+#     NEOF is a partnership between world-leading labs at the Universities of Liverpool and Sheffield who have pooled resources and expertise to deliver state-of-the-art omics expertise, capability and training to UK environmental scientists.
+# 
+#     We are funded by the Natural Environment Research Council (NERC).
+# 
+#     Our three primary pillars are: access to omics technologies, a visitor facility, and our bioinformatics training courses.
+# 
+#     Our omics technologies include: Genomic sequencing, Isoform analysis, Epigenomics, Single-cell omics, and quantitative metabolomics. To make these technologies more accessible we offer regular funding opportunities.
+# 
+#     Our visitor facility (based in the University of Sheffield) provides PhD students hands-on training in sample preparation for downstream omics technologies.
+# 
+#     Our final pillar, the main focus of the poster, is our bioinformatic workshops. We have run over 70 2-day courses since 2020. These cover the foundations of bioinformatics (e.g. intro to Linux, QC, python, R) to application specific courses (e.g. 16S rRNA, shotgun metagenomics, population genomics, etc.). All except one a year are online to cater to the entire UK. We are proud that we currently have a 100% recommendation rate from the thousands of attendees.
+#   url: ''
 - number: '19'
   title: PeerLadder – a national peer mentoring initiative supporting underrepresented dRTP leaders
   presenter: Saskia Lawson-Tovey

@@ -11,7 +11,7 @@
   {%- assign pn = p.name -%}{%- assign po = p.org -%}{%- assign pr = p.role -%}{%- assign pid = "" -%}
 {%- endif -%}
 {%- assign pt = p.topic | default: pr -%}
-<li>
+<li{% if include.chair %} class="chair"{% endif %}>
   {%- if pn == "" or pn == nil %}<strong>Speaker TBC</strong>
   {%- elsif pid != "" %}<a class="person" href="{{ '/' | append: page.event | append: '/speakers/' | relative_url }}#{{ pid }}"><strong>{{ pn }}</strong></a>
   {%- else %}<strong>{{ pn }}</strong>{% endif %}

@@ -155,6 +155,7 @@ speakers:
   - { id: mark-wappett,        name: Mark Wappett,          org: Almac Discovery,                   photo: "", role: Head of Bioinformatics, bio: "" }
   - { id: neil-hall,           name: Neil Hall,             org: Earlham Institute,                 photo: "", bio: "" }
   - { id: philippe-rocca-serra, name: Philippe Rocca-Serra, org: University of Oxford,              photo: "", bio: "" }
+  - { id: robert-andrews,      name: Robert Andrews,        org: Cardiff University,                photo: "", bio: "" }
   - { id: richard-stark,       name: Richard Stark,         org: University of Warwick,             photo: "", bio: "" }
   - { id: sascha-ott,          name: Sascha Ott,            org: University of Warwick,             photo: "", bio: "" }
   - { id: saskia-lawson-tovey, name: Saskia Lawson-Tovey,   org: University of Manchester,          photo: "", bio: "" }
@@ -205,6 +206,7 @@ days:
         kind: session
         number: 2
         title: ELIXIR-UK success and future
+        chair: { id: robert-andrews }
         format: Lightning talks – five minutes each plus two for questions
         description: >-
           What the Node has achieved this year and who has joined it. Flash talks from our newest member
@@ -218,7 +220,7 @@ days:
           - { id: sascha-ott, topic: "New service: EnteroBase" }
           - { id: eva-caamano, topic: "New community: BioinfoCoreLeaders Club" }
           - { id: saskia-lawson-tovey, topic: "PeerLadder – a national peer mentoring initiative supporting underrepresented dRTP leaders" }
-          - { id: tony-burdett, topic: "How have BioFAIR Pathfinders utilised ELIXIR services to drive their projects forward?" }
+          - { id: tony-burdett, topic: "How have BioFAIR Fellows utilised ELIXIR services to drive their projects forward?" }
           - { id: carole-goble, topic: "BioFAIR Methods Commons: a national service for finding, running and sharing FAIR workflows in UK life sciences" }
           - { id: xenia-perez-sitja, topic: "FAIR in action Bridge – a BioFAIR Pathfinder from the RDM Club" }
         interactive: []
