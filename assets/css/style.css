@@ -1,4 +1,5 @@
 /* Lato, self-hosted (SIL Open Font Licence) */
+@font-face { font-family: Lato; font-weight: 300; font-style: normal; font-display: swap; src: url('../fonts/lato-300.woff2') format('woff2'); }
 @font-face { font-family: Lato; font-weight: 400; font-style: normal; font-display: swap; src: url('../fonts/lato-400.woff2') format('woff2'); }
 @font-face { font-family: Lato; font-weight: 700; font-style: normal; font-display: swap; src: url('../fonts/lato-700.woff2') format('woff2'); }
 @font-face { font-family: Lato; font-weight: 900; font-style: normal; font-display: swap; src: url('../fonts/lato-900.woff2') format('woff2'); }
@@ -89,9 +90,9 @@ img { max-width: 100%; }
 .slot__time { margin: 0; font-weight: 900; color: var(--navy); font-size: 1.05rem; font-variant-numeric: tabular-nums; }
 .slot__sep, .slot__end { font-weight: 400; color: var(--text); font-size: .9rem; }
 .slot__title { font-size: 1.35rem; margin: 2px 0 2px; }
-.slot__chair { margin: 2px 0 0; font-size: .92rem; }
-.slot__chair strong { color: var(--navy); }
-.slot__desc { margin: 12px 0 0; }
+.slot__chair { margin: 12px 0 0; font-size: 14px; }
+.slot__chair strong { color: var(--text); font-weight: 400; }
+.slot__desc { margin: 4px 0 0; font-size: 14px; line-height: 1.5; color: #6b7780; } /* light, right under the title */
 .slot__note { margin: 0; }
 
 .slot--break, .slot--social { background: var(--line); border-color: var(--line); }
@@ -106,11 +107,11 @@ img { max-width: 100%; }
 /* People */
 .people { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; }
 .people li { border-left: 3px solid var(--line); padding-left: 12px; line-height: 1.35; font-size: 15px; }
-.people strong { color: var(--navy); }
-.people .org, .slot__chair .org { font-size: 14px; font-style: italic; color: var(--text); }
-.people .topic { font-size: 14px; }
+.people strong { color: var(--blue); font-weight: 400; } /* regular weight – only the session title is bold */
+.people .org, .slot__chair .org { font-size: 14px; font-weight: 300; color: var(--text); } /* Lato Light – thinner instead of italic */
+/* First line of every entry (talk title, or name when there is no talk) is 15px blue; second line is 14px grey */
 .people .talk__by { font-size: 14px; color: var(--text); }
-.people .organisers { border-left-color: var(--orange); font-size: .92rem; }
+.people .organisers { border-left-color: var(--orange); font-size: 14px; }
 
 /* World Café topics – numbered tiles */
 .topics { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 8px; }
@@ -161,7 +162,6 @@ img { max-width: 100%; }
   .slot__sep { display: none; }
   .slot__end { display: block; }
   .topics { grid-template-columns: 1fr 1fr; }
-  .people { grid-template-columns: 1fr 1fr; gap: 10px 24px; }
   .logistics__card { grid-template-columns: 1.2fr 1fr; padding: 40px; }
 }
 @media (min-width: 980px) {
@@ -394,4 +394,35 @@ img { max-width: 100%; }
   .parallel { grid-template-columns: 110px 1fr; gap: 20px; }
   .parallel__cols { grid-template-columns: 1fr 1fr; }
   .parallel .slot .slot__flag { margin-left: 0; }
+}
+
+/* One left edge: break and social rows line up with session text */
+@media (min-width: 720px) {
+  .slot--break .slot__grid, .slot--social .slot__grid { display: grid; grid-template-columns: 110px 1fr; gap: 0 20px; }
+  .slot--break.slot--highlight .slot__grid { grid-template-columns: 86px 1fr; } /* 24px of border + padding inside the photo card */
+}
+
+/* Buttons inside the programme – one size down, to sit with the tighter text */
+.slot .btn { font-size: 15px; padding: 6px 14px; }
+
+/* Blue bullet per speaker entry – sits on the column edge, entry text indented after it */
+.people li:not(.organisers) { position: relative; padding-left: 16px; }
+.people li:not(.organisers)::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px;
+  border-radius: 50%; background: var(--blue); }
+
+/* Figures in a full-width dark blue band right under the hero – three equal columns, aligned to the page */
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); width: auto; max-width: none; box-sizing: border-box;
+  margin: 0; padding: 20px 16px; background: var(--navy); border-top: 1px solid rgba(255,255,255,.12); gap: 0; }
+.stat { padding: 0 14px; }
+.stat:first-child { padding-left: 0; }
+.stat + .stat { border-left: 1px solid rgba(255,255,255,.2); }
+.stat__figure { color: #fff; font-size: 1.8rem; }
+.stat__figure small { color: rgba(255,255,255,.75); }
+.stat__label { color: rgba(255,255,255,.75); text-transform: none; letter-spacing: normal; font-size: 13px; font-weight: 400; margin-top: 4px; }
+@media (min-width: 720px) {
+  .stats { padding: 28px max(20px, calc((100% - var(--wrap)) / 2 + 20px)); }
+  .stat { padding: 0 32px; }
+  .stat:first-child { padding-left: 0; }
+  .stat__figure { font-size: 2.2rem; }
+  .stat__label { font-size: 14px; }
 }

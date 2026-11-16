@@ -6,7 +6,7 @@
 {%- assign p = include.p -%}
 {%- if p.id -%}
   {%- assign sp = ev.speakers | where: "id", p.id | first -%}
-  {%- assign pn = sp.name -%}{%- assign po = sp.org -%}{%- assign pr = sp.role -%}{%- assign pid = p.id -%}
+  {%- assign pn = sp.name -%}{%- assign po = sp.org -%}{%- assign pr = p.role | default: sp.role -%}{%- assign pid = p.id -%}
 {%- else -%}
   {%- assign pn = p.name -%}{%- assign po = p.org -%}{%- assign pr = p.role -%}{%- assign pid = "" -%}
 {%- endif -%}
@@ -39,7 +39,10 @@
 {%- else %}
 <li>
   <strong>{{ pn }}</strong>
-  {%- if po != "" and po != nil %}<br><span class="org">{{ po }}</span>{% endif %}
-  {%- if pt != "" and pt != nil %}<br><span class="topic">{{ pt }}</span>{% endif %}
+  {%- comment -%} Two lines, like talks: name, then "Role, Org" {%- endcomment -%}
+  {%- if pt != "" and pt != nil or po != "" and po != nil %}<br><span class="talk__by">
+    {%- if pt != "" and pt != nil %}{{ pt }}{% if po != "" and po != nil %}, {% endif %}{% endif -%}
+    {%- if po != "" and po != nil %}<span class="org">{{ po }}</span>{% endif -%}
+  </span>{% endif %}
 </li>
 {%- endif %}

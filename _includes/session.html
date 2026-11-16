@@ -13,14 +13,14 @@
     <p class="slot__time">{{ s.start }}<span class="slot__sep">–</span><span class="slot__end">{{ s.end }}</span></p>
     <div class="slot__body">
       <h3 class="slot__title">{{ s.title }}</h3>
-      {%- if s.chair %}
-        {%- assign ch = site.data[page.event].speakers | where: "id", s.chair.id | first | default: s.chair -%}
-        <p class="slot__chair">Chaired by <strong>{{ ch.name }}</strong>{% if ch.org %}, <span class="org">{{ ch.org }}</span>{% endif %}</p>
-      {%- endif %}
       {%- if s.note %}<p class="slot__note">{{ s.note }}</p>{% endif %}
 
       {%- if s.kind == 'session' or s.kind == 'colocated' %}
         {%- if s.description %}<p class="slot__desc">{{ s.description }}</p>{% endif %}
+        {%- if s.chair %}
+        {%- assign ch = site.data[page.event].speakers | where: "id", s.chair.id | first | default: s.chair -%}
+        <p class="slot__chair">Chaired by <strong>{{ ch.name }}</strong>{% if ch.org %}, <span class="org">{{ ch.org }}</span>{% endif %}</p>
+      {%- endif %}
 
         {%- if s.topics %}
         <ol class="topics">{% for t in s.topics %}<li><span>{{ forloop.index }}</span>{{ t }}</li>{% endfor %}</ol>

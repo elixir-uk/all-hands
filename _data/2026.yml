@@ -167,7 +167,7 @@ speakers:
 #   start / end   – 24h times, UK time
 #   kind          – session | break | social | colocated
 #   chair         – { id: speaker-id }
-#   people        – { id: speaker-id, topic: "" }, or { ids: [id, id], topic: "" } for a shared talk, or { name: "", org: "", topic: "" } for groups and TBCs
+#   people        – { id: speaker-id, topic: "" } (a talk – shown first), or role: "" instead of topic for non-talks;, or { ids: [id, id], topic: "" } for a shared talk, or { name: "", org: "", topic: "" } for groups and TBCs
 #   interactive   – buttons on the /live/ page only (label + url)
 #   slides        – shown on every page once added (post-event archive)
 days:
@@ -359,8 +359,8 @@ days:
           decide what the catalogue should include and how it describes datasets. Your ideas and
           requirements feed the afternoon Joint Statement Workshop.
         people:
-          - { id: ian-overton, topic: AIRBDS working group }
-          - { id: charlie-harrison, topic: AIRBDS working group }
+          - { id: ian-overton, role: AIRBDS working group }
+          - { id: charlie-harrison, role: AIRBDS working group }
         organisers: Run with AIBIO-UK and AIRBDS
         links:
           - label: AIRBDS Core metric preprint
@@ -383,7 +383,7 @@ days:
         people:
           - { id: carole-goble }
           - { id: neil-hall }
-          - { id: jason-williams, topic: "Presents the Impact Awards – member of the ELIXIR-UK Scientific and Industry Advisory Board" }
+          - { id: jason-williams, role: "Presents the Impact Awards – member of the ELIXIR-UK Scientific and Industry Advisory Board" }
         interactive: []
         slides: ""
 
