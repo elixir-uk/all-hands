@@ -4,10 +4,10 @@
   title: ELIXIR-UK Human Data & Tech Club - the story of our community-driven network for health data and technology in the UK
   presenter: Saskia Lawson-Tovey
   authors: |-
-    Saskia Lawson-Tovey, The University of Manchester
-    Tim Beck, The University of Nottingham,
+    Saskia Lawson-Tovey, University of Manchester
+    Tim Beck, University of Nottingham
     Wendi Bacon, Health Data Research UK
-    Xenia Perez-Sitja, Earlham Institute
+    Xènia Pérez Sitjà, Earlham Institute
   abstract: |-
     At the ELIXIR-UK All Hands 2023, the ELIXIR-UK community came together and identified a need to gather, coordinate, and disseminate our human data activities amongst the ELIXIR-UK and wider ELIXIR communities.
 
@@ -27,25 +27,22 @@
   url: ''
 - number: '02'
   title: CRUK Data Hub
-  presenter: Frances Pearl
+  presenter: Sarah Wooller
   authors: |-
-    Sarah Wooller1, Ayoola Olojede1, Sam Cox2, Sanika Raut3, Andrew Levy1, Christopher Tso4 , Andrew Blake5,6,Iliada Eleftheriou5,7,Meike Van Hemelrick5,8, Leslie Glass3, Joseph Day4, Loki Sinclair2, Peter Harrison2, Frances M G Pearl1,5*
-
-    1 Bioinformatics Group, University of Sussex,
-
-    2 HDR-UK,
-
-    3 Cancer Research UK,
-
-    4 Cancer Research Horizons
-
-    5 CRUK data advisory group,
-
-    6 University of Oxford,
-
-    7 University of Manchester
-
-    8 KCL
+    Sarah Wooller, University of Sussex
+    Ayoola Olojede, University of Sussex
+    Sam Cox, Health Data Research UK
+    Sanika Raut, Cancer Research UK
+    Andrew Levy, University of Sussex
+    Christopher Tso, Cancer Research Horizons
+    Andrew Blake, CRUK Data Advisory Group; University of Oxford
+    Iliada Eleftheriou, CRUK Data Advisory Group; University of Manchester
+    Meike Van Hemelrick, CRUK Data Advisory Group; King's College London
+    Leslie Glass, Cancer Research UK
+    Joseph Day, Cancer Research Horizons
+    Loki Sinclair, Health Data Research UK
+    Peter Harrison, Health Data Research UK
+    Frances M G Pearl, University of Sussex; CRUK Data Advisory Group
   abstract: |-
     CRUK has funded the generation of thousands of cancer datasets, but most are only known to researchers directly involved in their generation or their established collaborators. It is very difficult for other researchers to know what data has already been generated and how to access these datasets or samples for re-analysis. The process taken to access these data is often significantly time-consuming.
 
@@ -57,9 +54,9 @@
   title: Mapping Individual Patients' Resistance Signatures in Myeloma Reveals Candidate Therapeutic Targets and Novel Resistance Mechanisms
   presenter: Samuel Buchanan
   authors: |-
-    Samuel Buchanan (Queen's University Belfast)
-    Madhulika Verma (Queen's University Belfast)
-    Ian Overton (Queen's University Belfast)
+    Samuel Buchanan, Queen's University Belfast
+    Madhulika Verma, Queen's University Belfast
+    Ian Overton, Queen's University Belfast
   abstract: |-
     Background:
     Myeloma is a terminal haematological malignancy, in which patients undergo an adaptive resistance-driven remission-relapse cycle, eventually exhausting therapeutic options. Therapy resistance is mediated by complex networks of genes with poorly understood, context-specific functions. To identify context-specific drivers of myeloma resistance, we employed a network modelling approach, revealing potential resistance mechanisms, druggable targets and companion biomarkers.
@@ -77,18 +74,18 @@
   title: Data Context Model for FAIR Health Data
   presenter: Esmond Urwin
   authors: |-
-    Esmond Urwin [1], Tim Beck [1], Antonella Demestri [2], Armando Mendez-Villalon [1] , Gordon Milligan [3], Andrew Burton [4], Alexander Davydov [5], Bob Laramee [6], Andy Rae [1] , Stefanie Thust [7,8,9], Guruprasad Aithal [10], Philip Quinlan [1]
-
-    1 Centre for Health Informatics, NIHR Nottingham Biomedical Research Centre, Faculty of Medicine and Health Sciences, University of Nottingham, UK.
-    2 Nuffield Department of Orthopaedics, Rheumatology and Musculoskeletal Sciences, University of Oxford, UK.
-    3 Health Informatics Centre, School of Medicine, University of Dundee, UK.
-    4 School of Science and Technology, Nottingham Trent University, UK
-    5 Thesaurus Health.
-    6 School of Computer Science, University of Nottingham, UK.
-    7 Nottingham University Hospitals NHS Trust, Nottingham, UK.
-    8 Magnetic Resonance and Precision Imaging, NIHR Nottingham Biomedical Research Centre, University of Nottingham, UK.
-    9 Department of Translational Neuroscience and Stroke, UCL Institute of Neurology, London, UK.
-    10 Nottingham Digestive Disease Centre, NIHR Nottingham Biomedical Research Centre, Faculty of Medicine and Health Sciences, University of Nottingham, UK.
+    Esmond Urwin, University of Nottingham
+    Tim Beck, University of Nottingham
+    Antonella Demestri, University of Oxford
+    Armando Mendez-Villalon, University of Nottingham
+    Gordon Milligan, University of Dundee
+    Andrew Burton, Nottingham Trent University
+    Alexander Davydov, Thesaurus Health
+    Bob Laramee, University of Nottingham
+    Andy Rae, University of Nottingham
+    Stefanie Thust, Nottingham University Hospitals NHS Trust; University of Nottingham; University College London
+    Guruprasad Aithal, University of Nottingham
+    Philip Quinlan, University of Nottingham
   abstract: |-
     Introduction
     Health data is being created at an ever-greater rate whilst often being underutilised. Common Data Models (CDM) such as Observational Medical Outcomes Partnership (OMOP) enable Findable, Accessible, Interoperable and Reusable (FAIR) data. When transforming data to OMOP, many factors induce dataset variability, from different systems and software to perspectives and expertise. Yet, there are no formal approaches to represent dataset trustworthiness. The capture and use of context can engender trust and boost dataset comprehension and provide provenance to boost health data research.
@@ -106,7 +103,7 @@
   title: Integrated Omics Approach to Psychiatry
   presenter: Theo Stolz
   authors: |-
-    Theo Stolz (University of Bradford)
+    Theo Stolz, University of Bradford
   abstract: |-
     Psychiatry currently operates a trial-and-error approach to psychotropic medication prescribing. Given the increase in personalised medicine overall and research into pharmacogenomics in psychiatry, there is potential for systematic change in the prescribing methodology. However, no centralised database exists dedicated to the pharmacogenomic interactions of psychotropics. Creating such a database would enable the development of models for personalised medicine to be practised in the psychiatric field. This poster outlines the development of a research database of antidepressants and pharmacogenomic interactions. Using MIAME and MINSEQE guidelines, research establishing interactions will be manually curated for rigour to ensure consistent standards are met. FAIR guiding principles are used throughout the database development, as advised through the data management plan developed using DS Wizard. The database will be constructed and integrated with the dedicated Galaxy server. A model development using phenotypes that underpin pharmacokinetic influences on antidepressants will provide evidence of the utility of the research database. This will allow for further models for guiding prescribing processes of antidepressants to be established and subsequently put into practice. The database being discussed thus acts as a step towards personalised medicine in psychiatry, where there is a widespread use of pharmacological intervention.
   url: ''
@@ -114,7 +111,14 @@
   title: How have BioFAIR Pathfinders utilised ELIXIR services to drive their projects forward?
   presenter: Edward Clark
   authors: |-
-    Tony Burdett (Earlham Institute), Nishadi De Silva (Earlham Institute), Edward Clark (Earlham Institute), Eva Wan (Earlham Institute), Lindsey Crosswell (Earlham Institute), Laura Shemilt (Earlham Institute), Galabina Yordanova (Earlham Institute), Neil Hall (Earlham Institute)
+    Tony Burdett, Earlham Institute
+    Nishadi De Silva, Earlham Institute
+    Edward Clark, Earlham Institute
+    Eva Wan, Earlham Institute
+    Lindsey Crosswell, Earlham Institute
+    Laura Shemilt, Earlham Institute
+    Galabina Yordanova, Earlham Institute
+    Neil Hall, Earlham Institute
   abstract: |-
     BioFAIR is the UK's national programme, jointly funded by BBSRC and MRC, building a federated and interoperable digital research infrastructure for the life sciences. In 2026, BioFAIR invested over £800,000 in nine Pathfinder projects: short, focused initiatives that tackle real FAIR bottlenecks within a defined scientific question, and whose experience feeds directly into the design of BioFAIR's infrastructure. A guiding principle of the programme is that Pathfinders should build on and connect existing solutions rather than reinvent them, making ELIXIR and other established community services a natural starting point for many teams.
 
@@ -126,7 +130,7 @@
   title: 'Mind the gap: from FAIR policy to everyday research practice'
   presenter: Xènia Pérez Sitjà
   authors: |-
-    Xènia Pérez Sitjà (PI, presenting), Earlham Institute
+    Xènia Pérez Sitjà, Earlham Institute
     Robert Andrews, Cardiff University
     Munazah Andrabi, University of Manchester
     Nicholas Owen, University College London
@@ -145,17 +149,23 @@
 
     This work argues that the quality of digital research infrastructure depends on this middle layer.
   url: ''
-- number: 08
+- number: '08'
   title: 'FAIRPath: making plant pathology experiments more FAIR through better standards, semantics and practical tools'
   presenter: Richard Ostler
   authors: |-
-    Richard Ostler, Andrew Mead, Hsin-Yu Chang, Tegan Darch, Gail Canning (all Rothamsted), Philippe Rocca-Serra (Oxford), Aoife O'Driscoll NIAB
+    Richard Ostler, Rothamsted Research
+    Andrew Mead, Rothamsted Research
+    Hsin-Yu Chang, Rothamsted Research
+    Tegan Darch, Rothamsted Research
+    Gail Canning, Rothamsted Research
+    Philippe Rocca-Serra, University of Oxford
+    Aoife O'Driscoll, NIAB
   abstract: |-
     FAIRPath: Foundations for a FAIRer Plant Pathology Community is a BioFAIR Pathfinder project which aims to improve the interoperability and reuse of data from field and controlled environment experiments, using Plant Pathology as an example domain.
     Progress on the Statistics Ontology is establishing additional representation of experimental design, for example separating blocking structure, treatment structure and treatment allocation, while explicitly representing experimental units, replication and randomisation. In parallel, FAIRPath is contributing to the development of MIAPPE, including improved representation of experimental factors and factor levels to support consistent description and cross-experiment reuse.
     These developments are being translated into a researcher-friendly MIAPPE Excel template, providing structured metadata capture within an interface familiar to researchers. Next steps will include an RO-Crate transformation and community BYOD workshops.
   url: ''
-- number: 09
+- number: '09'
   title: 'FAIR-Figures: Enabling AI-ready image datasets from biomedical literature'
   presenter: Tim Beck
   authors: |-
@@ -177,7 +187,13 @@
   title: 'Living Best Practices for Agentic AI in Science: Shared and Citable'
   presenter: Huayu Xin
   authors: |-
-    Sebastian Lobentanzer, Helmholtz Munich; Santiago Casas, German Aerospace Center (DLR); Gavin Farrell, University of Padova; Till Korten, Helmholtz-Zentrum Dresden-Rossendorf (HZDR); Marek Ostaszewski, Luxembourg Centre for Systems Biomedicine, University of Luxembourg; Fotis Psomopoulos, Institute of Applied Biosciences, Centre for Research and Technology Hellas (INAB|CERTH); Huayu Xin, University of Edinburgh
+    Sebastian Lobentanzer, Helmholtz Munich
+    Santiago Casas, German Aerospace Center (DLR)
+    Gavin Farrell, University of Padova
+    Till Korten, Helmholtz-Zentrum Dresden-Rossendorf (HZDR)
+    Marek Ostaszewski, Luxembourg Centre for Systems Biomedicine, University of Luxembourg
+    Fotis Psomopoulos, Institute of Applied Biosciences, Centre for Research and Technology Hellas (INAB|CERTH)
+    Huayu Xin, University of Edinburgh
   abstract: |-
     Agentic AI is beginning to connect scientific data, tools and models across increasingly complex research workflows. Yet its rapid development outpaces conventional guidance: static reports often become outdated before publication, while institutions repeatedly produce overlapping recommendations. We present AI for Science (aiforscience.eu), an open, living and citable record of best practices for applying agentic AI to research, developed through European scientific communities including the ELIXIR Agentic AI Task Force and the Helmholtz AI Interest Group.
     The initiative brings together ten actionable practices spanning three interconnected areas. Method and infrastructure practices address choosing agents only when suited to the task, making scientific resources agent-accessible, vetting interfaces and designing them around researchers’ needs. Evidence and reliability practices call for machine-actionable documentation, traceable provenance and citation, and task-specific evaluation before reliance. Governance and risk practices define enforceable autonomy limits, named human accountability, effective oversight and screening for dual-use or high-consequence applications. Each practice translates evidence into guidance for researchers, infrastructure providers and institutional decision-makers.
@@ -187,18 +203,18 @@
   title: 'BioFAIR Methods Commons: a national service for finding, running and sharing FAIR workflows in UK life sciences'
   presenter: Carole Goble
   authors: |-
-    Shoaib Sufi (University of Manchester)
-    Carole Goble (University of Manchester)
-    Munazah Andrabi (University of Manchester)
-    Stuart Owen (University of Manchester)
-    Finn Bacall (University of Manchester)
-    Nicola Soranzo (Earlham Institute)
-    Tom Paine (Earlham Institute)
-    Irene Papatheodorou (Earlham Institute)
-    Cates Mallaney (Seqera)
-    Laramie Lindsay (Seqera)
-    Matteo Fiandesio (Seqera)
-    Evan Flodden (Seqera)
+    Shoaib Sufi, University of Manchester
+    Carole Goble, University of Manchester
+    Munazah Andrabi, University of Manchester
+    Stuart Owen, University of Manchester
+    Finn Bacall, University of Manchester
+    Nicola Soranzo, Earlham Institute
+    Tom Paine, Earlham Institute
+    Irene Papatheodorou, Earlham Institute
+    Cates Mallaney, Seqera
+    Laramie Lindsay, Seqera
+    Matteo Fiandesio, Seqera
+    Evan Flodden, Seqera
   abstract: |-
     The BioFAIR Methods Commons is a new national service that gives UK life science researchers one place to find, run and share computational workflows. Funded through BioFAIR and launched in summer 2026, it is led by the University of Manchester and brings together the teams behind Galaxy, Nextflow (through Seqera) and the WorkflowHub registry.
     Workflow tools and compute resources in the UK are fragmented, and researchers range from wet-lab biologists who need no-code tools to developers running large Nextflow pipelines. The Methods Commons aims to serve this whole range. It joins cloud-hosted Galaxy and Nextflow execution with WorkflowHub for discovery, registration and quality review, and builds on community resources such as nf-core, the Intergalactic Workflow Commission and the Galaxy ToolShed rather than replacing them. Researchers will reach the service through a graphical interface, APIs or natural-language agents. Workflow Run RO-Crates will record the provenance of each run, and RO-Crate and GA4GH standards will support moving work between national and institutional compute.
@@ -209,15 +225,15 @@
   title: 'WorkflowHub: A FAIR Registry for Computational Workflows Across Scientific Domains'
   presenter: Phil Reed
   authors: |-
-    Finn Bacall, The University of Manchester
-    Johan Gustafsson, Australian BioCommons, University of Melbourne
-    Stuart Owen, The University of Manchester
-    Phil Reed, The University of Manchester
-    Sanskrit Suthar, The University of Manchester
-    Nick Juty, The University of Manchester
-    Munazah Andrabi, The University of Manchester
-    Stian Soiland-Reyes, The University of Manchester
-    Carole Goble, The University of Manchester
+    Finn Bacall, University of Manchester
+    Johan Gustafsson, Australian BioCommons; University of Melbourne
+    Stuart Owen, University of Manchester
+    Phil Reed, University of Manchester
+    Sanskrit Suthar, University of Manchester
+    Nick Juty, University of Manchester
+    Munazah Andrabi, University of Manchester
+    Stian Soiland-Reyes, University of Manchester
+    Carole Goble, University of Manchester
   abstract: |-
     WorkflowHub is an open-source registry designed for computational workflows (and standard operating procedures) and related resources used in scientific research. Its core mission is to enhance collaboration by making workflows more visible, citable, and shareable, thereby improving access to scientific knowledge. WorkflowHub plays a key role in strengthening scientific reproducibility, transparency, and the overall value of workflows by helping them adhere to FAIR (Findability, Accessibility, Interoperability, Reusability) principles.
     The platform supports open standards, including the Common Workflow Language, RO-Crate, Bioschemas, FAIR Signposting and GA4GH’s TRS API, enabling seamless discovery, reuse, and integration with various tools and platforms. WorkflowHub’s new RO-Crate submission API enables workflow communities to automatically create and maintain workflow entries in the catalogue. Metadata in WorkflowHub is enriched through integrations with services like BBMRI-ERIC’s LifeMonitor for workflow health-checking and ELIXIR’s bio.tools registry for linking workflows to the tools they utilize.
@@ -228,12 +244,12 @@
   title: 'RO-Crate: Packaging research outputs with FAIR metadata for reproducibility across domains'
   presenter: Phil Reed
   authors: |-
-    Eli Chadwick, The University of Manchester
-    Sanskrit Suthar, The University of Manchester
-    Phil Reed, The University of Manchester
-    Stian Soiland-Reyes, The University of Manchester
+    Eli Chadwick, University of Manchester
+    Sanskrit Suthar, University of Manchester
+    Phil Reed, University of Manchester
+    Stian Soiland-Reyes, University of Manchester
     Peter Sefton, University of Queensland
-    Carole Goble, The University of Manchester
+    Carole Goble, University of Manchester
   abstract: |-
     RO-Crate is a mechanism for packaging research outputs along with structured metadata, providing machine-readability and reproducibility following the FAIR principles.
 
@@ -245,14 +261,14 @@
   title: 'TeSS: a federated, FAIR-aligned platform for distributed management and exchange of training resources'
   presenter: Phil Reed
   authors: |-
-    Phil Reed, The University of Manchester
-    Munazah Andrabi, The University of Manchester
-    Finn Bacall, The University of Manchester
-    Oliver Knodel, Helmholtz-Zentrum Dresden - Rossendorf e.V
-    Martin Voigt, Helmholtz-Zentrum Dresden - Rossendorf e.V
+    Phil Reed, University of Manchester
+    Munazah Andrabi, University of Manchester
+    Finn Bacall, University of Manchester
+    Oliver Knodel, Helmholtz-Zentrum Dresden-Rossendorf (HZDR)
+    Martin Voigt, Helmholtz-Zentrum Dresden-Rossendorf (HZDR)
     Kenneth Rioja, CERN
     Maria Doyle, University of Limerick
-    Carole Goble, The University of Manchester
+    Carole Goble, University of Manchester
   abstract: |-
     Training materials and events are widely dispersed and fragmented, making it challenging for users to identify relevant materials. Training e-Support System (TeSS) is a web-based open-source platform consolidating life science resources from various providers into an easy-to-use portal. It is a one-stop-shop for trainers and trainees to discover training materials, workshops, and online courses for bioinformatics, data science, and computational biology.
 
@@ -266,7 +282,9 @@
   title: Bioschemas
   presenter: Nick Juty
   authors: |-
-    Phil Reed, Nick Juty (both University of Manchester) Helena Schnitzer (Forschungszentrum Jülich)
+    Phil Reed, University of Manchester
+    Nick Juty, University of Manchester
+    Helena Schnitzer, Forschungszentrum Jülich
   abstract: |-
     Bioschemas.org defines domain-specific metadata schemas based on schema.org extensions, which expose key metadata properties from resource records. This provides a lightweight and easily adoptable means to incorporate key metadata on web records, and a mechanism to link to domain-specific ontology/vocabulary terms. As an established community effort focused on improving the FAIRness of resources in the Life Sciences, we now aim to extend the impact of Bioschemas beyond improvements to ‘findability’.
 
@@ -280,9 +298,9 @@
   title: 'EVERSE RSQKit: Enabling Research Excellence. Practical Guidance & Tools to improve your project''s software health, trust and reproducibility'
   presenter: Michael Sparks
   authors: |-
-    Michael Sparks (University of Manchester)
-    Shoaib Sufi (University of Manchester)
-    Aleksandra Nenadic (University of Manchester)
+    Michael Sparks, University of Manchester
+    Shoaib Sufi, University of Manchester
+    Aleksandra Nenadic, University of Manchester
   abstract: |-
     Research depends on software, but trustworthy and reproducible results also rely on how that software is developed, shared and maintained. EVERSE brings together guidance, tools and community knowledge to improve research software practice across the lifecycle.
 
@@ -294,7 +312,7 @@
   title: 'RSpace: A data orchestration platform for research infrastructures and ecosystems'
   presenter: Rory Macneil
   authors: |-
-    Rory Macneil, Research Space
+    Rory Macneil, ResearchSpace
   abstract: |-
     A new category of research infrastructure providers is emerging to complement universities, the traditional providers. National and supra-institutional generalist and domain specific research infrastructures offer the potential for wider access to a broad range of services, easier collaboration across institutions, and scalable and hence cost-effective deployment.
 
@@ -331,10 +349,10 @@
   title: PeerLadder – a national peer mentoring initiative supporting underrepresented dRTP leaders
   presenter: Saskia Lawson-Tovey
   authors: |-
-    Saskia Lawson-Tovey, The University of Manchester
-    Xenia Perez-Sitja, Earlham Institute
+    Saskia Lawson-Tovey, University of Manchester
+    Xènia Pérez Sitjà, Earlham Institute
     Sara Villa, OLS
-    Carole Goble, The University of Manchester
+    Carole Goble, University of Manchester
   abstract: |-
     PeerLadder is a new peer-mentoring initiative – a national programme to support leadership development and empower underrepresented digital Research Technical Professionals (dRTPs) to climb the leadership ladder together – building confidence, community, and inclusive leadership across UK research-performing organisations.
 
@@ -352,9 +370,14 @@
   title: 'BIOMEDASA: Driving Innovation in Biomedical Data Science Through Collaboration'
   presenter: Eva Caamano Gutierrez
   authors: |-
-    Eva Caamaño Gutiérrez1, Emily Johnson1, Anthony Evans1,Elisabeth Deja1, David Hughes1, Andrew Jones1, Christina McDonald1,Alasdair Ivens2
-
-    1University of Liverpool (UoL), Liverpool, UK.2University of Edinburgh , Edinburgh, UK.
+    Eva Caamano Gutierrez, University of Liverpool
+    Emily Johnson, University of Liverpool
+    Anthony Evans, University of Liverpool
+    Elisabeth Deja, University of Liverpool
+    David Hughes, University of Liverpool
+    Andrew Jones, University of Liverpool
+    Christina McDonald, University of Liverpool
+    Alasdair Ivens, University of Edinburgh
   abstract: |-
     Biomedical data science is fundamental to modern healthcare research, yet gaps in specialist expertise, training and career pathways continue to limit its effective integration into research teams.
     BIOMEDASA (Biomedical Data Science Accelerator) is an MRC-funded initiative led by the University of Liverpool, working with UK partners to strengthen biomedical data science capacity and foster a more inclusive, sustainable workforce.
@@ -388,9 +411,14 @@
   title: 'Driving discovery through FAIR principles: A case study of support with long read RNAseq data'
   presenter: Rachael Thompson and Dorothea Seiler Vellame
   authors: |-
-    Rachael Thompson1,2, Dorothea Seiler Vellame1,2, Sam Fletcher1,2, Lucia Dutan Polit3, Rosemary Bamford2, Szi Kay Leung2, Jonathan Mill1,2, Deepak Srivastava3
-
-    1. UK Human Functional Genomics Initiative, 2. University of Exeter, 3. King’s College London
+    Rachael Thompson, UK Human Functional Genomics Initiative; University of Exeter
+    Dorothea Seiler Vellame, UK Human Functional Genomics Initiative; University of Exeter
+    Sam Fletcher, UK Human Functional Genomics Initiative; University of Exeter
+    Lucia Dutan Polit, King's College London
+    Rosemary Bamford, University of Exeter
+    Szi Kay Leung, University of Exeter
+    Jonathan Mill, UK Human Functional Genomics Initiative; University of Exeter
+    Deepak Srivastava, King's College London
   abstract: |-
     The UK Human Functional Genomics Initiative (FGx) aims to characterise the functional consequences of variants to improve understanding of biological mechanisms and develop new treatments. It is a national organisation containing five research clusters, 16 FGx-funded pilot projects, supported by the Coordination Hub and Data Coordination Centre (DCC).
 
@@ -411,12 +439,12 @@
   title: A Comprehensive, FAIR-Compliant Metabolome Resource for the Model Organism Research Community
   presenter: Ossama Edbali
   authors: |-
-    Ossama Edbali (University of Birmingham, School of Biosciences)
-    Thomas Kappas (University of Birmingham, Advanced Research Computing)
-    Neil Butcher (University of Birmingham, Advanced Research Computing)
-    Heather Turner (University of Birmingham, Advanced Research Computing)
-    Mark R. Viant (University of Birmingham, School of Biosciences)
-    Ralf J. M. Weber (University of Birmingham, School of Biosciences)
+    Ossama Edbali, University of Birmingham
+    Thomas Kappas, University of Birmingham
+    Neil Butcher, University of Birmingham
+    Heather Turner, University of Birmingham
+    Mark R. Viant, University of Birmingham
+    Ralf J. M. Weber, University of Birmingham
   abstract: |-
     Model organisms are central to fundamental and translational research across the life sciences. While large-scale genomic, transcriptomic, and proteomic initiatives have transformed our understanding of model-organism biology, progress in characterising their metabolomes and metabolic biochemistry has lagged, despite the critical roles of small molecules in cellular pathways, physiology, and environmental responses. Comparative genomics has revealed conserved and species-specific genetic features, yet systematic comparative metabolomics remains underdeveloped, largely due to a lack of specialised, scalable, FAIR-compliant resources and standardised workflows.
     The Deep Metabolome Annotation (DMA) strategy, developed at the University of Birmingham, has partly addressed this gap by combining diverse chromatographic separations with comprehensive multi-stage mass spectrometry and bespoke computational workflows to deliver high-confidence, reusable metabolite and lipid annotations. Applied to Daphnia magna, DMA yielded >8,500 annotations and a prototype community database and web portal, DMAdb. It includes open-source and Galaxy-based tools for data processing, quality control, and annotation.
@@ -426,8 +454,8 @@
   title: Predicting network rewiring from single-cell transcriptomics with perturbation-informed graph autoencoders
   presenter: Kedar Natarajan
   authors: |-
-    Shreyansh Priyadarshi, University of Southampton, UK
-    Kedar Natarajan, University of Southampton, UK
+    Shreyansh Priyadarshi, University of Southampton
+    Kedar Natarajan, University of Southampton
   abstract: |-
     Gene regulatory networks (GRNs) provide an important framework for understanding how complex cellular behaviors emerge from genomic instructions. Computing these networks from single-cell transcriptomics is essential for mapping cellular states, yet traditional methods often treat GRNs as static maps. In reality, perturbations induce significant regulatory changes absent from reference networks. To address this, we develop DS-GAE, a topology-informed graph autoencoder that integrates a baseline GRN with single-cell expression data to infer condition-specific networks following transcription factor knockdown or overexpression. By learning dynamic regulatory influences along known pathways, DS-GAE predicts novel regulator–target interactions and captures structural rewiring missed by static models. We validate these predictions against several published multiomics networks. This framework shifts GRN inference toward predicting dynamic regulatory plasticity in response to genetic changes.
   url: ''
