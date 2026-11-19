@@ -99,14 +99,15 @@
     Conclusion
     A preliminary data context model has been created to represent the amorphous aspects of context that are not included with current datasets. The model aims to reduce dataset ambiguity and variability to boost dataset utility and precision, thus accelerating research outcomes. A JMIR Research Protocols study paper has been submitted pending revisions, furthermore, an NIHR Better Methods Better Research grant has been submitted - the purpose of these is to capture context, test the model and prove the utility of context for data.
   url: ''
-- number: '05'
-  title: Integrated Omics Approach to Psychiatry
-  presenter: Theo Stolz
-  authors: |-
-    Theo Stolz, University of Bradford
-  abstract: |-
-    Psychiatry currently operates a trial-and-error approach to psychotropic medication prescribing. Given the increase in personalised medicine overall and research into pharmacogenomics in psychiatry, there is potential for systematic change in the prescribing methodology. However, no centralised database exists dedicated to the pharmacogenomic interactions of psychotropics. Creating such a database would enable the development of models for personalised medicine to be practised in the psychiatric field. This poster outlines the development of a research database of antidepressants and pharmacogenomic interactions. Using MIAME and MINSEQE guidelines, research establishing interactions will be manually curated for rigour to ensure consistent standards are met. FAIR guiding principles are used throughout the database development, as advised through the data management plan developed using DS Wizard. The database will be constructed and integrated with the dedicated Galaxy server. A model development using phenotypes that underpin pharmacokinetic influences on antidepressants will provide evidence of the utility of the research database. This will allow for further models for guiding prescribing processes of antidepressants to be established and subsequently put into practice. The database being discussed thus acts as a step towards personalised medicine in psychiatry, where there is a widespread use of pharmacological intervention.
-  url: ''
+# Poster 05 withdrawn (presenter dropped out) – kept commented so it can be restored; number 05 left unused.
+# - number: '05'
+#   title: Integrated Omics Approach to Psychiatry
+#   presenter: Theo Stolz
+#   authors: |-
+#     Theo Stolz, University of Bradford
+#   abstract: |-
+#     Psychiatry currently operates a trial-and-error approach to psychotropic medication prescribing. Given the increase in personalised medicine overall and research into pharmacogenomics in psychiatry, there is potential for systematic change in the prescribing methodology. However, no centralised database exists dedicated to the pharmacogenomic interactions of psychotropics. Creating such a database would enable the development of models for personalised medicine to be practised in the psychiatric field. This poster outlines the development of a research database of antidepressants and pharmacogenomic interactions. Using MIAME and MINSEQE guidelines, research establishing interactions will be manually curated for rigour to ensure consistent standards are met. FAIR guiding principles are used throughout the database development, as advised through the data management plan developed using DS Wizard. The database will be constructed and integrated with the dedicated Galaxy server. A model development using phenotypes that underpin pharmacokinetic influences on antidepressants will provide evidence of the utility of the research database. This will allow for further models for guiding prescribing processes of antidepressants to be established and subsequently put into practice. The database being discussed thus acts as a step towards personalised medicine in psychiatry, where there is a widespread use of pharmacological intervention.
+#   url: ''
 - number: '06'
   title: How have BioFAIR Pathfinders utilised ELIXIR services to drive their projects forward?
   presenter: Edward Clark
