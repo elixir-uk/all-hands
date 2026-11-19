@@ -10,7 +10,7 @@ layout: default
 
   <div class="posters">
   {%- for p in posters %}
-    <details class="poster" id="poster-{{ p.number }}">
+    <details class="poster" name="posters" id="poster-{{ p.number }}">
       <summary>
         <span class="poster__no">{{ p.number }}</span>
         <span class="poster__head">
@@ -34,5 +34,20 @@ layout: default
 (function () {
   var hit = location.hash && document.querySelector(location.hash);
   if (hit && hit.tagName === 'DETAILS') hit.open = true;
+})();
+
+// Only one poster open at a time. The name attribute does this natively;
+// this covers older browsers and keeps the opened poster in view when a
+// longer one above it collapses.
+(function () {
+  var all = document.querySelectorAll('details.poster');
+  all.forEach(function (d) {
+    d.addEventListener('toggle', function () {
+      if (!d.open) return;
+      all.forEach(function (o) { if (o !== d && o.open) o.open = false; });
+      var top = d.getBoundingClientRect().top;
+      if (top < 0) d.scrollIntoView({ block: 'start' });
+    });
+  });
 })();
 </script>

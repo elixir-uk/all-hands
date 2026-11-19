@@ -172,7 +172,6 @@ img { max-width: 100%; }
   .is-live .day__head { top: 100px; }
 }
 @media (max-width: 560px) {
-  .topbar__nav { gap: 16px; }
   .topbar__logo .logo { height: 30px; }
 }
 
@@ -230,10 +229,7 @@ img { max-width: 100%; }
   .venue { grid-template-columns: 1.2fr 1fr; padding: 40px; }
   .venue .flag { margin-left: -40px; }
 }
-@media (max-width: 720px) {
-  .topbar__nav a:not(.btn) { font-size: 12px; }
-  .topbar__inner { flex-wrap: wrap; gap: 10px; }
-}
+
 
 /* ── Posters page ─────────────────────────────────────────── */
 .posters__lede { font-size: 1.1rem; margin: 40px 0 16px; max-width: 46em; }
@@ -425,4 +421,24 @@ img { max-width: 100%; }
   .stat:first-child { padding-left: 0; }
   .stat__figure { font-size: 2.2rem; }
   .stat__label { font-size: 14px; }
+}
+
+/* ── Phone menu – hamburger pinned to the top of the screen ── */
+.topbar__toggle { display: none; }
+@media (max-width: 720px) {
+  html { scroll-padding-top: 64px; } /* anchors land below the pinned bar */
+  .topbar { position: sticky; top: 0; z-index: 20; }
+  .topbar__inner { position: relative; height: 56px; padding: 0 16px; }
+  .topbar__toggle { display: grid; place-items: center; width: 44px; height: 44px; margin-right: -10px; padding: 0;
+    background: none; border: 0; color: #fff; cursor: pointer; }
+  .topbar__toggle svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+  .topbar__close, .topbar.is-open .topbar__bars { display: none; }
+  .topbar.is-open .topbar__close { display: inline; }
+  .topbar__nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch;
+    gap: 0; padding: 4px 16px 20px; background: var(--navy); border-top: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 10px 20px rgba(2,52,82,.3); }
+  .topbar.is-open .topbar__nav { display: flex; }
+  .topbar__nav a:not(.btn) { padding: 14px 0; font-size: 15px; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .topbar__nav .reg { margin-top: 16px; }
+  .is-live .nownext { top: 56px; } /* sit under the pinned bar */
 }
