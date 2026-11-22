@@ -258,7 +258,7 @@ days:
         note: Don't disappear – we gather everyone for the ELIXIR-UK group photo during this break.
 
       - start: "15:45"
-        end: "17:05"
+        end: "17:00"
         kind: session
         number: 4
         title: World Café – conversations with the community
@@ -282,7 +282,7 @@ days:
             url: ""
         slides: ""
 
-      - start: "17:05"
+      - start: "17:00"
         end: "18:00"
         kind: session
         number: 5
