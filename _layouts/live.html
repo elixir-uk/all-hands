@@ -23,6 +23,7 @@ layout: default
     <p class="actions">
       {%- if ev.live.slack != "" %}<a class="btn" href="{{ ev.live.slack }}">Join Slack{% if ev.live.slack_channel != "" %} · {{ ev.live.slack_channel }}{% endif %}</a>{% endif %}
       {%- if ev.live.phone != "" %}<a class="btn btn--outline" href="tel:{{ ev.live.phone | remove: ' ' }}">Urgent help: {{ ev.live.phone }}</a>{% endif %}
+      {%- if ev.live.presentations != "" %}<a class="btn btn--outline" href="{{ ev.live.presentations }}">Presentations</a>{% endif %}
       <a class="btn btn--outline" href="mailto:{{ ev.live.email }}">Email the team</a>
       {%- if ev.live.contacts_list != "" %}<a class="btn btn--outline" href="{{ ev.live.contacts_list }}">Attendee contacts</a>{% endif %}
     </p>

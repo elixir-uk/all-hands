@@ -34,10 +34,8 @@
         {%- endif %}
 
         {%- capture buttons -%}
-          {%- if include.live -%}
-            {%- for l in s.interactive -%}{%- if l.url != "" -%}{%- assign u = l.url -%}{%- if u contains "://" or u contains "mailto:" -%}{%- else -%}{%- assign u = u | relative_url -%}{%- endif -%}<a class="btn" href="{{ u }}">{{ l.label }}</a>{%- endif -%}{%- endfor -%}
-          {%- endif -%}
-          {%- for l in s.links -%}{%- if l.url != "" -%}{%- assign u = l.url -%}{%- if u contains "://" or u contains "mailto:" -%}{%- else -%}{%- assign u = u | relative_url -%}{%- endif -%}<a class="btn btn--outline" href="{{ u }}">{{ l.label }}</a>{%- endif -%}{%- endfor -%}
+          {%- for l in s.interactive -%}{%- if l.url != "" -%}{%- assign u = l.url -%}{%- if u contains "://" or u contains "mailto:" -%}{%- else -%}{%- assign u = u | relative_url -%}{%- endif -%}<a class="btn btn--quiet" href="{{ u }}">{{ l.label }}</a>{%- endif -%}{%- endfor -%}
+          {%- for l in s.links -%}{%- if l.url != "" -%}{%- assign u = l.url -%}{%- if u contains "://" or u contains "mailto:" -%}{%- else -%}{%- assign u = u | relative_url -%}{%- endif -%}<a class="btn {% if l.quiet %}btn--quiet{% else %}btn--outline{% endif %}" href="{{ u }}">{{ l.label }}</a>{%- endif -%}{%- endfor -%}
           {%- if s.slides and s.slides != "" -%}<a class="btn btn--outline" href="{{ s.slides }}">Slides</a>{%- endif -%}
         {%- endcapture -%}
         {%- assign buttons = buttons | strip -%}

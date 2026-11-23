@@ -48,7 +48,7 @@ Small fixes can go straight into `_data/posters/2026.yml`. Never commit the CSV 
 
 ## During the event
 
-- Interactive buttons (`interactive:`) only appear on `/live/`, and only when `url` is filled in.
+- Interactive links (`interactive:` – polls, Q&As, shared folders) appear on their session in the programme and on `/2026/interactive/`, only once `url` is filled in.
 - Preview the now-and-next bar with `/2026/live/?now=2026-11-25T10:30`.
 - Add `slides:` links after the event to turn `/2026/` into the archive.
 

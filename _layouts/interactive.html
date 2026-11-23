@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{%- comment -%}
+  Sessions with a poll, Q&A or shared notes, as a quiet list; each link is an outline button.
+{%- endcomment -%}
+{%- assign ev = site.data[page.event] -%}
+{% include hero.html title="Interactive" kicker=ev.title compact=true %}
+
+<main class="wrap">
+  <p class="posters__lede">Polls, Q&amp;As and shared notes for the sessions where you take part.
+  {%- if ev.live.presentations != "" %} Slides are in the <a href="{{ ev.live.presentations }}">presentations folder</a>.{% endif %}</p>
+
+  <ol class="interactive">
+  {%- for day in ev.days %}
+    {%- for s in day.sessions %}
+      {%- assign live_links = s.interactive | where_exp: "l", "l.url != ''" -%}
+      {%- if live_links.size > 0 %}
+    <li class="interactive__item">
+      <p class="interactive__when">{{ day.date | date: "%a" }} {{ s.start }}</p>
+      <div>
+        <h2>{% if s.number %}Session {{ s.number }} · {% endif %}{{ s.title }}</h2>
+        <p class="interactive__links">
+          {%- for l in live_links %}<a class="btn btn--quiet" href="{{ l.url }}">{{ l.label }}</a>{% endfor -%}
+        </p>
+      </div>
+    </li>
+      {%- endif %}
+    {%- endfor %}
+  {%- endfor %}
+  </ol>
+</main>

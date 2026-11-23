@@ -130,6 +130,7 @@ live:
   email: contact@elixiruknode.org
   phone: ""                # urgent line – public repo, so use a work number if any
   contacts_list: ""        # link to the access-controlled attendee list, not the list itself
+  presentations: https://drive.google.com/drive/folders/1NvYdi1U0-PI9Xxd0rqDES2LAGK3YLpms?usp=sharing   # shared slides folder
 
 # ── Speakers ─────────────────────────────────────────────────────────────────
 # One entry per person, in first-name order. Sessions refer to people by id.
@@ -168,7 +169,9 @@ speakers:
 #   kind          – session | break | social | colocated
 #   chair         – { id: speaker-id }
 #   people        – { id: speaker-id, topic: "" } (a talk – shown first), or role: "" instead of topic for non-talks;, or { ids: [id, id], topic: "" } for a shared talk, or { name: "", org: "", topic: "" } for groups and TBCs
-#   interactive   – buttons on the /live/ page only (label + url)
+#   interactive   – polls, Q&As and shared docs: { label, type (Poll | Q&A | Folder | Doc), url }.
+#                   Shown on the session in the programme and listed on the Interactive page.
+#   links         – other buttons { label, url }; add quiet: true for the blue-outline style
 #   slides        – shown on every page once added (post-event archive)
 days:
   - date: "2026-11-25"
@@ -193,7 +196,10 @@ days:
           - { id: john-whaling, topic: Liverpool City Region innovation }
           - { id: eva-caamano, topic: Liverpool Shared Facilities and the Civic Innovation Labs }
           - { id: jacqueline-vigilanti, topic: Research data management innovation through Library services }
-        interactive: []
+        interactive:
+          - label: Join the poll for Jacqueline's talk
+            type: Poll
+            url: https://partici.fi/03675965
         slides: ""
 
       - start: "11:15"
@@ -247,7 +253,8 @@ days:
           - { id: birgit-meldal }
         interactive:
           - label: Ask the panel a question
-            url: ""      # one Slido per panel – see README
+            type: Q&A
+            url: https://partici.fi/67760415
         slides: ""
 
       - start: "15:15"
@@ -278,8 +285,9 @@ days:
         interactive:
           - label: Choose your three topics
             url: ""
-          - label: Table notes
-            url: ""
+          - label: Open the table notes
+            type: Folder
+            url: https://drive.google.com/drive/folders/1JyETm4t8JQiwmARp87NQp0cQd1auwIj-?usp=sharing
         slides: ""
 
       - start: "17:00"
@@ -294,9 +302,8 @@ days:
         links:
           - label: All poster abstracts
             url: /2026/posters/
-        interactive:
-          - label: Browse poster abstracts
-            url: /2026/posters/
+            quiet: true
+        interactive: []
         slides: ""
 
       - start: "18:00"
@@ -336,7 +343,8 @@ days:
           - { id: guy-cochrane, topic: A global perspective }
         interactive:
           - label: Ask the panel a question
-            url: ""      # one Slido per panel – see README
+            type: Q&A
+            url: https://partici.fi/82851984
         slides: ""
 
       - start: "10:45"

@@ -22,12 +22,14 @@
       <nav class="topbar__nav" id="site-nav">
         {%- if page.noindex %}
         <a href="#help">Help</a>
+        <a href="{{ base }}interactive/">Interactive</a>
         <a href="{{ base }}posters/">Posters</a>
         <a href="{{ base }}">Full programme</a>
         {%- else %}
         <a href="{{ base }}#programme"{% if page.section == 'programme' %} aria-current="page"{% endif %}>Programme</a>
         <a href="{{ base }}speakers/"{% if page.section == 'speakers' %} aria-current="page"{% endif %}>Speakers</a>
         <a href="{{ base }}posters/"{% if page.section == 'posters' %} aria-current="page"{% endif %}>Posters</a>
+        <a href="{{ base }}interactive/"{% if page.section == 'interactive' %} aria-current="page"{% endif %}>Interactive</a>
         <a href="{{ base }}logistics/"{% if page.section == 'logistics' %} aria-current="page"{% endif %}>Logistics</a>
         {% include register.html compact=true class="reg--nav" %}
         {%- endif %}
@@ -49,6 +51,11 @@
   </footer>
   <script src="{{ '/assets/js/registration.js' | relative_url }}"></script>
   <script>
+  // Links that leave the site (polls, Q&As, Drive folders, slides…) open in a new tab.
+  document.querySelectorAll('a[href^="http"]').forEach(function (a) {
+    if (a.host !== location.host) { a.target = '_blank'; a.rel = 'noopener'; }
+  });
+
   // Phone menu: the hamburger opens and closes the nav; following a link or pressing Escape closes it.
   (function () {
     var bar = document.querySelector('.topbar');

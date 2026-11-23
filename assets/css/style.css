@@ -442,3 +442,14 @@ img { max-width: 100%; }
   .topbar__nav .reg { margin-top: 16px; }
   .is-live .nownext { top: 56px; } /* sit under the pinned bar */
 }
+
+/* ── Interactive page – a quiet list ─────────────────────── */
+.interactive { list-style: none; margin: 8px 0 0; padding: 0; border-top: 3px solid var(--navy); max-width: 46em; }
+.interactive__item { display: grid; grid-template-columns: 90px 1fr; gap: 0 20px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.interactive__when { margin: 0; font-weight: 700; color: var(--navy); font-variant-numeric: tabular-nums; }
+.interactive__item h2 { font-size: 1.1rem; margin: 0 0 10px; color: var(--navy); }
+.interactive__links { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+
+/* Quiet button – blue outline, no fill */
+.btn--quiet { background: transparent; color: var(--blue); border: 1px solid var(--blue); font-size: 15px; padding: 6px 14px; }
+.btn--quiet:hover { background: var(--blue); color: #fff; }
