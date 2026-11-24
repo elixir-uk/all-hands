@@ -157,7 +157,6 @@ speakers:
   - { id: neil-hall,           name: Neil Hall,             org: Earlham Institute,                 photo: "", bio: "" }
   - { id: philippe-rocca-serra, name: Philippe Rocca-Serra, org: University of Oxford,              photo: "", bio: "" }
   - { id: robert-andrews,      name: Robert Andrews,        org: Cardiff University,                photo: "", bio: "" }
-  - { id: richard-stark,       name: Richard Stark,         org: University of Warwick,             photo: "", bio: "" }
   - { id: sascha-ott,          name: Sascha Ott,            org: University of Warwick,             photo: "", bio: "" }
   - { id: saskia-lawson-tovey, name: Saskia Lawson-Tovey,   org: University of Manchester,          photo: "", bio: "" }
   - { id: tony-burdett,        name: Tony Burdett,          org: BioFAIR,                           photo: "", bio: "" }
@@ -222,7 +221,7 @@ days:
           - { id: andrew-mason, topic: "New member: University of York" }
           - { id: evan-troendle, topic: "New member: Queen's University Belfast" }
           - { id: kedar-natarajan, topic: "New member: University of Southampton" }
-          - { ids: [richard-stark, sascha-ott], topic: "New service: EnteroBase" }
+          - { ids: [sascha-ott], topic: "New service: EnteroBase" }
           - { id: eva-caamano, topic: "New community: BioinfoCoreLeaders Club" }
           - { id: saskia-lawson-tovey, topic: "PeerLadder – a national peer mentoring initiative supporting underrepresented dRTP leaders" }
           - { id: tony-burdett, topic: "Introducing the Fellowship of BioFAIR" }
