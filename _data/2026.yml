@@ -373,6 +373,9 @@ days:
           - label: AIRBDS Core metric preprint
             url: https://zenodo.org/records/21803891
         interactive:
+          - label: Open the session notes
+            type: Doc
+            url: https://docs.google.com/document/d/1oIa2hsmMLOK56vmybD0EKy9GlHB-c3hO8O-zF3bBBHM/edit?tab=t.0
           - label: "Strand 1 – what counts as a dataset"
             url: ""
           - label: "Strand 2 – taxonomy of AI applications"
